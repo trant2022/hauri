@@ -61,13 +61,13 @@ Plans:
   4. Duplicate webhook deliveries do not create duplicate transactions or inflate revenue numbers
   5. Files are never accessible via public URL -- only via time-limited signed URLs after verified payment
 
-**Plans**: TBD
+**Plans:** 4 plans
 
 Plans:
-- [ ] 03-01: Fee calculation module (integer arithmetic), Stripe Checkout session creation with Direct Charges
-- [ ] 03-02: Webhook handler (checkout.session.completed, charge.disputed) with idempotent transaction recording
-- [ ] 03-03: Post-payment success page with race condition handling, signed URL download delivery
-- [ ] 03-04: Email receipt with download link, 48-hour re-download token system
+- [ ] 03-01-PLAN.md — Stripe SDK setup, DB migration (payment_intent_id, RLS, RPCs), Checkout session creation, buy button wiring
+- [ ] 03-02-PLAN.md — Webhook handler (checkout.session.completed, charge.dispute.created) with idempotent transaction recording
+- [ ] 03-03-PLAN.md — Download token system (HMAC, 48h), success page with Stripe API verification, re-download API route
+- [ ] 03-04-PLAN.md — Email receipt via Resend with download link, wired into webhook handler
 
 ### Phase 4: Connect + Payouts
 **Goal**: Creators can onboard to Stripe Connect, complete KYC, and request payouts to their bank account
@@ -108,10 +108,10 @@ Plans:
 |-------|---------------|--------|-----------|
 | 1. Foundation + Auth | 3/3 | Verified | 2026-03-05 |
 | 2. Creator Workflow | 3/3 | Verified | 2026-03-05 |
-| 3. Purchase + Download | 0/4 | Not started | - |
+| 3. Purchase + Download | 0/4 | Planning complete | - |
 | 4. Connect + Payouts | 0/2 | Not started | - |
 | 5. Dashboard + Profiles + Polish | 0/3 | Not started | - |
 
 ---
 *Roadmap created: 2026-03-05*
-*Last updated: 2026-03-05 after Phase 2 completion*
+*Last updated: 2026-03-05 after Phase 3 planning*
