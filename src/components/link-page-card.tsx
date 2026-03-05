@@ -1,5 +1,9 @@
+"use client"
+
+import { useState } from "react"
 import Image from "next/image"
-import { FileIcon, Lock } from "lucide-react"
+import { FileIcon, Lock, Loader2 } from "lucide-react"
+import { toast } from "sonner"
 
 import { calculateFees, formatPrice, formatFileSize } from "@/lib/fees"
 import { Badge } from "@/components/ui/badge"
@@ -42,8 +46,33 @@ interface LinkPageCardProps {
 }
 
 export function LinkPageCard({ link }: LinkPageCardProps) {
+  const [loading, setLoading] = useState(false)
   const fees = calculateFees(link.price_amount)
   const fileTypeLabel = getFileTypeLabel(link.files.mime_type)
+
+  async function handleBuy() {
+    setLoading(true)
+    try {
+      const response = await fetch("/api/checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ linkId: link.id }),
+      })
+
+      const data = await response.json()
+
+      if (response.ok && data.url) {
+        window.location.href = data.url
+        return
+      }
+
+      toast.error(data.error || "Something went wrong. Please try again.")
+    } catch {
+      toast.error("Something went wrong. Please try again.")
+    } finally {
+      setLoading(false)
+    }
+  }
 
   return (
     <Card className="w-full max-w-lg overflow-hidden border-border/50 shadow-lg">
@@ -100,9 +129,17 @@ export function LinkPageCard({ link }: LinkPageCardProps) {
         <Button
           size="lg"
           className="w-full text-base"
-          data-link-id={link.id}
+          disabled={loading}
+          onClick={handleBuy}
         >
-          Buy for {formatPrice(fees.totalBuyerPays, link.price_currency)}
+          {loading ? (
+            <>
+              <Loader2 className="mr-2 size-4 animate-spin" />
+              Processing...
+            </>
+          ) : (
+            <>Buy for {formatPrice(fees.totalBuyerPays, link.price_currency)}</>
+          )}
         </Button>
 
         {/* Footer note */}
