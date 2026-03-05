@@ -10,18 +10,18 @@ See: .planning/PROJECT.md (updated 2026-03-05)
 ## Current Position
 
 Phase: 3 of 5 (Purchase + Download)
-Plan: 1 of 4 in current phase
+Plan: 2 of 4 in current phase
 Status: In progress
-Last activity: 2026-03-05 -- Completed 03-01-PLAN.md
+Last activity: 2026-03-05 -- Completed 03-02-PLAN.md
 
-Progress: ██████▓░░░ 47%
+Progress: ███████░░░ 53%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 7
+- Total plans completed: 8
 - Average duration: ~4 min
-- Total execution time: ~27 min
+- Total execution time: ~29 min
 
 **By Phase:**
 
@@ -29,10 +29,10 @@ Progress: ██████▓░░░ 47%
 |-------|-------|-------|----------|
 | 1 | 3/3 | ~14 min | ~5 min |
 | 2 | 3/3 | ~10 min | ~3 min |
-| 3 | 1/4 | ~3 min | ~3 min |
+| 3 | 2/4 | ~5 min | ~3 min |
 
 **Recent Trend:**
-- Last 5 plans: 02-01 (~4 min), 02-02 (~3 min), 02-03 (~3 min), 03-01 (~3 min)
+- Last 5 plans: 02-02 (~3 min), 02-03 (~3 min), 03-01 (~3 min), 03-02 (~2 min)
 - Trend: Consistent fast execution
 
 ## Accumulated Context
@@ -66,6 +66,8 @@ Recent decisions affecting current work:
 - Stripe client uses lazy Proxy pattern to avoid build-time initialization failure (STRIPE_SECRET_KEY unavailable during next build)
 - No client-side Stripe SDK -- hosted Checkout uses server-side redirect only
 - link-page-card converted to client component for buy button interactivity
+- Webhook returns 200 even on handler errors (only signature failures return non-200) to prevent Stripe retry storms
+- Duplicate transaction detection uses PostgreSQL 23505 unique constraint error (atomic, no race conditions)
 
 ### Pending Todos
 
@@ -84,5 +86,5 @@ Recent decisions affecting current work:
 ## Session Continuity
 
 Last session: 2026-03-05
-Stopped at: Completed 03-01-PLAN.md
+Stopped at: Completed 03-02-PLAN.md
 Resume file: None
