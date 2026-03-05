@@ -30,7 +30,11 @@ Creators can upload a file, set a price, share a link, and get paid -- in under 
 
 ### Active
 
-(None -- define for next milestone with `/gsd:new-milestone`)
+- Dockerfile with Next.js standalone build for production deployment -- v1.1
+- Docker Compose setup with app + reverse proxy (auto-SSL) -- v1.1
+- Git pull deploy workflow: SSH in, git pull, rebuild, restart -- v1.1
+- App accessible at test.trant.ch with HTTPS -- v1.1
+- .env.example documenting all required environment variables -- v1.1
 
 ### Out of Scope
 
@@ -44,6 +48,17 @@ Creators can upload a file, set a price, share a link, and get paid -- in under 
 - Multi-file bundles -- one file per link for v1
 - Custom domains for creator profiles -- defer to v2
 
+## Current Milestone: v1.1 Docker Deployment
+
+**Goal:** Deploy Unlockt to Ubuntu server with Docker, accessible at test.trant.ch with HTTPS and a simple git pull deploy workflow.
+
+**Target features:**
+- Dockerfile with Next.js standalone output for production
+- Docker Compose with app + reverse proxy (Caddy for auto-SSL)
+- Deploy workflow: git pull → docker compose up --build -d
+- .env.example for all required environment variables
+- HTTPS via automatic Let's Encrypt certificates
+
 ## Context
 
 - Shipped v1.0 with 8,315 lines of TypeScript across 156 files
@@ -53,6 +68,7 @@ Creators can upload a file, set a price, share a link, and get paid -- in under 
 - TWINT support via Stripe Checkout for Swiss payment method
 - Large file uploads (up to 500MB) go direct from client to Supabase Storage via TUS protocol
 - Buyers get 48-hour re-download window via HMAC-signed email links
+- Deployment target: Ubuntu VPS with Docker installed, DNS A record for test.trant.ch via Hostpoint
 
 ## Constraints
 
@@ -80,4 +96,4 @@ Creators can upload a file, set a price, share a link, and get paid -- in under 
 | Reserved username blocklist | Prevent /[username] from shadowing static routes | Good |
 
 ---
-*Last updated: 2026-03-06 after v1.0 milestone*
+*Last updated: 2026-03-06 after v1.1 milestone started*
