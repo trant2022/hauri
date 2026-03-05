@@ -65,18 +65,16 @@ Recent decisions affecting current work:
 
 ### Pending Todos
 
-- Start Docker and run `npx supabase start` + `npx supabase db reset` to apply migrations (00001 + 00002)
-- Regenerate `src/types/database.ts` from local Supabase once Docker is available
 - Consider migrating middleware.ts to Next.js 16 "proxy" convention in future
 - Configure Supabase email templates for confirm signup and reset password flows
 - Add redirect URLs in Supabase dashboard (localhost and production)
 
 ### Blockers/Concerns
 
-- Docker not running: Supabase local instance cannot start, blocking end-to-end auth and storage testing
 - Next.js 16 middleware deprecation: functional now but will need migration eventually
 - Supabase email templates need manual dashboard configuration for verification/reset flows
 - Supabase project must be on Pro plan for 500MB file uploads (Free plan limits to 50MB)
+- Local Supabase: email confirmations disabled (enable_confirmations = false) -- accounts work immediately without email verification
 
 ## Session Continuity
 
