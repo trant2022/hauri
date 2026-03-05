@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-03-05)
 
 **Core value:** Creators can upload a file, set a price, share a link, and get paid -- in under 2 minutes
-**Current focus:** Phase 4
+**Current focus:** Phase 5
 
 ## Current Position
 
-Phase: 4 of 5 (Connect + Payouts)
-Plan: 1 of 2 in current phase
-Status: In progress
-Last activity: 2026-03-05 -- Completed 04-01-PLAN.md
+Phase: 4 of 5 (Connect + Payouts) -- COMPLETE
+Plan: 2 of 2 in phase 4
+Status: Phase complete
+Last activity: 2026-03-05 -- Completed 04-02-PLAN.md
 
-Progress: █████████░ 73%
+Progress: ████████████░░░ 80%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 11
+- Total plans completed: 12
 - Average duration: ~3 min
-- Total execution time: ~36 min
+- Total execution time: ~38 min
 
 **By Phase:**
 
@@ -30,11 +30,10 @@ Progress: █████████░ 73%
 | 1 | 3/3 | ~14 min | ~5 min |
 | 2 | 3/3 | ~10 min | ~3 min |
 | 3 | 4/4 | ~9 min | ~2 min |
-
-| 4 | 1/2 | ~3 min | ~3 min |
+| 4 | 2/2 | ~5 min | ~2.5 min |
 
 **Recent Trend:**
-- Last 5 plans: 03-02 (~2 min), 03-03 (~2 min), 03-04 (~2 min), 04-01 (~3 min)
+- Last 5 plans: 03-03 (~2 min), 03-04 (~2 min), 04-01 (~3 min), 04-02 (~2 min)
 - Trend: Consistent fast execution
 
 ## Accumulated Context
@@ -80,6 +79,9 @@ Recent decisions affecting current work:
 - Transfer error isolation: transfer failures never break checkout webhook or email sending
 - Pending transfer pattern: transactions default 'not_applicable', set 'pending' when creator not onboarded, batch-processed on account.updated
 - source_transaction used on transfers for automatic fund availability timing
+- Connect status as 4-state machine: NOT_STARTED, ONBOARDING, PENDING, ACTIVE
+- window.location.href for Stripe redirect (leaving app entirely, not Next.js router)
+- Earnings aggregation done in server component (not SQL) for multi-currency grouping
 
 ### Pending Todos
 
@@ -98,5 +100,5 @@ Recent decisions affecting current work:
 ## Session Continuity
 
 Last session: 2026-03-05
-Stopped at: Completed 04-01-PLAN.md
+Stopped at: Completed 04-02-PLAN.md (Phase 4 complete)
 Resume file: None
