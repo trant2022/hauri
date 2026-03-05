@@ -25,12 +25,12 @@ Unlockt is built in five phases that follow the critical path of value delivery:
   4. Landing page at / explains the product, shows how it works, and has a working signup CTA
   5. Every form validates input with clear error messages, and every async action shows loading state and toast feedback
 
-**Plans**: TBD
+**Plans:** 3 plans
 
 Plans:
-- [ ] 01-01: Next.js 15 project setup, Supabase config, database schema, Tailwind/shadcn design system
-- [ ] 01-02: Auth flows (registration, email verification, login, password reset, session persistence)
-- [ ] 01-03: Landing page and marketing layout
+- [ ] 01-01-PLAN.md — Next.js 15 project scaffolding, Supabase config, database schema, dark-mode design system, route group layouts
+- [ ] 01-02-PLAN.md — Auth flows: signup with username, login, forgot password, email verification, password reset, session redirects
+- [ ] 01-03-PLAN.md — Landing page with hero, how-it-works, features, and signup CTA
 
 ### Phase 2: Creator Workflow
 **Goal**: Creators can upload large files and create shareable payment links with prices, previews, and descriptions
@@ -106,7 +106,7 @@ Plans:
 
 | Phase | Plans Complete | Status | Completed |
 |-------|---------------|--------|-----------|
-| 1. Foundation + Auth | 0/3 | Not started | - |
+| 1. Foundation + Auth | 0/3 | Planning complete | - |
 | 2. Creator Workflow | 0/3 | Not started | - |
 | 3. Purchase + Download | 0/4 | Not started | - |
 | 4. Connect + Payouts | 0/2 | Not started | - |
