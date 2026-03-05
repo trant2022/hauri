@@ -110,6 +110,25 @@ export async function getPublicLinkBySlug(
 // ============================================================
 
 /**
+ * Fetches all completed transactions for a creator's links,
+ * including link title and slug for per-link breakdown.
+ * Used by the dashboard overview page.
+ */
+export async function getCreatorTransactionsWithLinks(
+  supabase: SupabaseClient<Database>,
+  userId: string
+) {
+  return supabase
+    .from("transactions")
+    .select(
+      "id, creator_amount, currency, transfer_status, created_at, links!inner(id, title, slug, user_id)"
+    )
+    .eq("links.user_id", userId)
+    .eq("status", "completed")
+    .order("created_at", { ascending: false })
+}
+
+/**
  * Fetches all completed transactions for a creator's links.
  * Joins transactions -> links to filter by creator user_id.
  * Returns raw rows for client-side aggregation by currency.
