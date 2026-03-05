@@ -10,18 +10,18 @@ See: .planning/PROJECT.md (updated 2026-03-05)
 ## Current Position
 
 Phase: 3 of 5 (Purchase + Download)
-Plan: 2 of 4 in current phase
+Plan: 3 of 4 in current phase
 Status: In progress
-Last activity: 2026-03-05 -- Completed 03-02-PLAN.md
+Last activity: 2026-03-05 -- Completed 03-03-PLAN.md
 
-Progress: ███████░░░ 53%
+Progress: ████████░░ 60%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 8
-- Average duration: ~4 min
-- Total execution time: ~29 min
+- Total plans completed: 9
+- Average duration: ~3 min
+- Total execution time: ~31 min
 
 **By Phase:**
 
@@ -29,10 +29,10 @@ Progress: ███████░░░ 53%
 |-------|-------|-------|----------|
 | 1 | 3/3 | ~14 min | ~5 min |
 | 2 | 3/3 | ~10 min | ~3 min |
-| 3 | 2/4 | ~5 min | ~3 min |
+| 3 | 3/4 | ~7 min | ~2 min |
 
 **Recent Trend:**
-- Last 5 plans: 02-02 (~3 min), 02-03 (~3 min), 03-01 (~3 min), 03-02 (~2 min)
+- Last 5 plans: 02-03 (~3 min), 03-01 (~3 min), 03-02 (~2 min), 03-03 (~2 min)
 - Trend: Consistent fast execution
 
 ## Accumulated Context
@@ -68,6 +68,9 @@ Recent decisions affecting current work:
 - link-page-card converted to client component for buy button interactivity
 - Webhook returns 200 even on handler errors (only signature failures return non-200) to prevent Stripe retry storms
 - Duplicate transaction detection uses PostgreSQL 23505 unique constraint error (atomic, no race conditions)
+- HMAC tokens use base64url encoding with timingSafeEqual for constant-time signature comparison
+- Success page is a server component calling Stripe API directly (no client-side fetch)
+- Download route redirects to signed URL (offloads bandwidth to Supabase CDN)
 
 ### Pending Todos
 
@@ -86,5 +89,5 @@ Recent decisions affecting current work:
 ## Session Continuity
 
 Last session: 2026-03-05
-Stopped at: Completed 03-02-PLAN.md
+Stopped at: Completed 03-03-PLAN.md
 Resume file: None
