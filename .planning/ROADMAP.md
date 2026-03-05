@@ -6,7 +6,7 @@ Unlockt is built in five phases that follow the critical path of value delivery:
 
 ## Phases
 
-- [ ] **Phase 1: Foundation + Auth** - Project scaffolding, database schema, auth system, design system, and landing page
+- [x] **Phase 1: Foundation + Auth** - Project scaffolding, database schema, auth system, design system, and landing page
 - [ ] **Phase 2: Creator Workflow** - File upload with resumable protocol and payment link creation with public link pages
 - [ ] **Phase 3: Purchase + Download** - Stripe Checkout payment flow, webhook processing, and secure file delivery with email receipts
 - [ ] **Phase 4: Connect + Payouts** - Stripe Connect Express onboarding, account state tracking, and creator payout requests
@@ -28,9 +28,9 @@ Unlockt is built in five phases that follow the critical path of value delivery:
 **Plans:** 3 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — Next.js 15 project scaffolding, Supabase config, database schema, dark-mode design system, route group layouts
-- [ ] 01-02-PLAN.md — Auth flows: signup with username, login, forgot password, email verification, password reset, session redirects
-- [ ] 01-03-PLAN.md — Landing page with hero, how-it-works, features, and signup CTA
+- [x] 01-01-PLAN.md — Next.js 15 project scaffolding, Supabase config, database schema, dark-mode design system, route group layouts
+- [x] 01-02-PLAN.md — Auth flows: signup with username, login, forgot password, email verification, password reset, session redirects
+- [x] 01-03-PLAN.md — Landing page with hero, how-it-works, features, and signup CTA
 
 ### Phase 2: Creator Workflow
 **Goal**: Creators can upload large files and create shareable payment links with prices, previews, and descriptions
@@ -106,7 +106,7 @@ Plans:
 
 | Phase | Plans Complete | Status | Completed |
 |-------|---------------|--------|-----------|
-| 1. Foundation + Auth | 0/3 | Planning complete | - |
+| 1. Foundation + Auth | 3/3 | Verified | 2026-03-05 |
 | 2. Creator Workflow | 0/3 | Not started | - |
 | 3. Purchase + Download | 0/4 | Not started | - |
 | 4. Connect + Payouts | 0/2 | Not started | - |
@@ -114,4 +114,4 @@ Plans:
 
 ---
 *Roadmap created: 2026-03-05*
-*Last updated: 2026-03-05*
+*Last updated: 2026-03-05 after Phase 1 completion*

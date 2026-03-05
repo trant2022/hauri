@@ -7,10 +7,10 @@
 
 ### Authentication
 
-- [ ] **AUTH-01**: Creator can register with email, password, and unique username
-- [ ] **AUTH-02**: Creator receives email verification after signup
-- [ ] **AUTH-03**: Creator can reset password via email link
-- [ ] **AUTH-04**: Creator session persists across browser refresh
+- [x] **AUTH-01**: Creator can register with email, password, and unique username
+- [x] **AUTH-02**: Creator receives email verification after signup
+- [x] **AUTH-03**: Creator can reset password via email link
+- [x] **AUTH-04**: Creator session persists across browser refresh
 
 ### File Management
 
@@ -62,17 +62,17 @@
 
 ### Public Pages
 
-- [ ] **PAGE-01**: Landing page at / explains the product, shows how it works, and has signup CTA
+- [x] **PAGE-01**: Landing page at / explains the product, shows how it works, and has signup CTA
 - [ ] **PAGE-02**: Creator profile page at /[username] shows avatar, bio, social links, and all active payment links
 - [ ] **PAGE-03**: Buyer-facing link page at /l/[linkId] with preview, price, fees, and buy button
 
 ### Design & UX
 
-- [ ] **UX-01**: Dark-mode-first design with Linear/Vercel-inspired aesthetic
+- [x] **UX-01**: Dark-mode-first design with Linear/Vercel-inspired aesthetic
 - [ ] **UX-02**: Mobile-responsive buyer flow (link page, checkout, success page, download)
 - [ ] **UX-03**: No buyer account required — friction-free purchase flow
-- [ ] **UX-04**: Every async action shows loading state and toast notification
-- [ ] **UX-05**: All inputs validated with Zod; clear error messages
+- [x] **UX-04**: Every async action shows loading state and toast notification
+- [x] **UX-05**: All inputs validated with Zod; clear error messages
 
 ## v2 Requirements
 
@@ -117,10 +117,10 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| AUTH-01 | Phase 1 | Pending |
-| AUTH-02 | Phase 1 | Pending |
-| AUTH-03 | Phase 1 | Pending |
-| AUTH-04 | Phase 1 | Pending |
+| AUTH-01 | Phase 1 | Complete |
+| AUTH-02 | Phase 1 | Complete |
+| AUTH-03 | Phase 1 | Complete |
+| AUTH-04 | Phase 1 | Complete |
 | FILE-01 | Phase 2 | Pending |
 | FILE-02 | Phase 2 | Pending |
 | FILE-03 | Phase 2 | Pending |
@@ -153,12 +153,12 @@
 | DASH-01 | Phase 5 | Pending |
 | DASH-02 | Phase 5 | Pending |
 | DASH-03 | Phase 5 | Pending |
-| PAGE-01 | Phase 1 | Pending |
+| PAGE-01 | Phase 1 | Complete |
 | PAGE-02 | Phase 5 | Pending |
-| UX-01 | Phase 1 | Pending |
+| UX-01 | Phase 1 | Complete |
 | UX-02 | Phase 5 | Pending |
-| UX-04 | Phase 1 | Pending |
-| UX-05 | Phase 1 | Pending |
+| UX-04 | Phase 1 | Complete |
+| UX-05 | Phase 1 | Complete |
 
 **Coverage:**
 - v1 requirements: 42 total
@@ -167,4 +167,4 @@
 
 ---
 *Requirements defined: 2026-03-05*
-*Last updated: 2026-03-05 after roadmap creation*
+*Last updated: 2026-03-05 after Phase 1 completion*
