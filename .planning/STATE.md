@@ -10,28 +10,28 @@ See: .planning/PROJECT.md (updated 2026-03-05)
 ## Current Position
 
 Phase: 1 of 5 (Foundation + Auth)
-Plan: 1 of 3 in current phase
+Plan: 2 of 3 in current phase
 Status: In progress
-Last activity: 2026-03-05 -- Completed 01-01-PLAN.md (Project Foundation + Supabase Setup)
+Last activity: 2026-03-05 -- Completed 01-02-PLAN.md (Auth Forms + Callbacks)
 
-Progress: ███░░░░░░░ 33% (Phase 1)
+Progress: ██████░░░░ 67% (Phase 1)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 1
-- Average duration: ~8 min
-- Total execution time: ~8 min
+- Total plans completed: 2
+- Average duration: ~5 min
+- Total execution time: ~10 min
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 1 | 1/3 | ~8 min | ~8 min |
+| 1 | 2/3 | ~10 min | ~5 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (~8 min)
-- Trend: First plan, no trend yet
+- Last 5 plans: 01-01 (~8 min), 01-02 (~2 min)
+- Trend: Accelerating as foundation is laid
 
 ## Accumulated Context
 
@@ -44,20 +44,27 @@ Recent decisions affecting current work:
 - Zod v4.3.6 installed (latest, not v3) -- API compatible for our usage
 - Manual Database types created (Docker unavailable for supabase gen types)
 - Dark values in :root (dark-mode-first), .light class for optional light override
+- Username uniqueness checked via pre-query before signUp (not database constraint error)
+- Auth forms use inline confirmation cards ("check your email") instead of separate pages
+- Reset password page guards with session check on mount, redirects unauthenticated users
+- OAuth callback route prepared as placeholder for future provider support
 
 ### Pending Todos
 
 - Start Docker and run `npx supabase start` + `npx supabase db reset` to apply migration
 - Regenerate `src/types/database.ts` from local Supabase once Docker is available
 - Consider migrating middleware.ts to Next.js 16 "proxy" convention in future
+- Configure Supabase email templates for confirm signup and reset password flows
+- Add redirect URLs in Supabase dashboard (localhost and production)
 
 ### Blockers/Concerns
 
 - Docker not running: Supabase local instance cannot start, blocking end-to-end auth testing
 - Next.js 16 middleware deprecation: functional now but will need migration eventually
+- Supabase email templates need manual dashboard configuration for verification/reset flows
 
 ## Session Continuity
 
 Last session: 2026-03-05
-Stopped at: Completed 01-01-PLAN.md
+Stopped at: Completed 01-02-PLAN.md
 Resume file: None
