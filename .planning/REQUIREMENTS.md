@@ -31,20 +31,20 @@
 
 ### Payments
 
-- [ ] **PAY-01**: Buyer can pay via Stripe Checkout with credit/debit card
-- [ ] **PAY-02**: Buyer can pay with TWINT for CHF-priced links
-- [ ] **PAY-03**: Buyer pays base price + 15% platform fee; creator receives base price minus 10%
-- [ ] **PAY-04**: All fee calculations use integer arithmetic (Rappen/cents) to avoid rounding errors
-- [ ] **PAY-05**: Stripe webhook handles checkout.session.completed with idempotent transaction recording
-- [ ] **PAY-06**: Chargeback webhook (charge.disputed) revokes download access and notifies creator
+- [x] **PAY-01**: Buyer can pay via Stripe Checkout with credit/debit card
+- [x] **PAY-02**: Buyer can pay with TWINT for CHF-priced links
+- [x] **PAY-03**: Buyer pays base price + 15% platform fee; creator receives base price minus 10%
+- [x] **PAY-04**: All fee calculations use integer arithmetic (Rappen/cents) to avoid rounding errors
+- [x] **PAY-05**: Stripe webhook handles checkout.session.completed with idempotent transaction recording
+- [x] **PAY-06**: Chargeback webhook (charge.disputed) revokes download access and notifies creator
 
 ### Download
 
-- [ ] **DL-01**: Buyer receives instant download via signed URL (60s expiry) on success page after confirmed payment
-- [ ] **DL-02**: Success page handles webhook race condition (polls or verifies via Stripe API)
-- [ ] **DL-03**: Buyer receives email receipt with download link after purchase
-- [ ] **DL-04**: Buyer can re-download within 48 hours via the email download link
-- [ ] **DL-05**: Files are never publicly accessible — private Supabase bucket only
+- [x] **DL-01**: Buyer receives instant download via signed URL (60s expiry) on success page after confirmed payment
+- [x] **DL-02**: Success page handles webhook race condition (polls or verifies via Stripe API)
+- [x] **DL-03**: Buyer receives email receipt with download link after purchase
+- [x] **DL-04**: Buyer can re-download within 48 hours via the email download link
+- [x] **DL-05**: Files are never publicly accessible — private Supabase bucket only
 
 ### Creator Dashboard
 
@@ -70,7 +70,7 @@
 
 - [x] **UX-01**: Dark-mode-first design with Linear/Vercel-inspired aesthetic
 - [ ] **UX-02**: Mobile-responsive buyer flow (link page, checkout, success page, download)
-- [ ] **UX-03**: No buyer account required — friction-free purchase flow
+- [x] **UX-03**: No buyer account required — friction-free purchase flow
 - [x] **UX-04**: Every async action shows loading state and toast notification
 - [x] **UX-05**: All inputs validated with Zod; clear error messages
 
@@ -133,18 +133,18 @@
 | LINK-05 | Phase 2 | Complete |
 | LINK-06 | Phase 2 | Complete |
 | PAGE-03 | Phase 2 | Complete |
-| PAY-01 | Phase 3 | Pending |
-| PAY-02 | Phase 3 | Pending |
-| PAY-03 | Phase 3 | Pending |
-| PAY-04 | Phase 3 | Pending |
-| PAY-05 | Phase 3 | Pending |
-| PAY-06 | Phase 3 | Pending |
-| DL-01 | Phase 3 | Pending |
-| DL-02 | Phase 3 | Pending |
-| DL-03 | Phase 3 | Pending |
-| DL-04 | Phase 3 | Pending |
-| DL-05 | Phase 3 | Pending |
-| UX-03 | Phase 3 | Pending |
+| PAY-01 | Phase 3 | Complete |
+| PAY-02 | Phase 3 | Complete |
+| PAY-03 | Phase 3 | Complete |
+| PAY-04 | Phase 3 | Complete |
+| PAY-05 | Phase 3 | Complete |
+| PAY-06 | Phase 3 | Complete |
+| DL-01 | Phase 3 | Complete |
+| DL-02 | Phase 3 | Complete |
+| DL-03 | Phase 3 | Complete |
+| DL-04 | Phase 3 | Complete |
+| DL-05 | Phase 3 | Complete |
+| UX-03 | Phase 3 | Complete |
 | CONN-01 | Phase 4 | Pending |
 | CONN-02 | Phase 4 | Pending |
 | CONN-03 | Phase 4 | Pending |
@@ -167,4 +167,4 @@
 
 ---
 *Requirements defined: 2026-03-05*
-*Last updated: 2026-03-05 after Phase 2 completion*
+*Last updated: 2026-03-06 after Phase 3 completion*
