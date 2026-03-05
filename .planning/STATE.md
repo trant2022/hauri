@@ -10,18 +10,18 @@ See: .planning/PROJECT.md (updated 2026-03-05)
 ## Current Position
 
 Phase: 3 of 5 (Purchase + Download)
-Plan: 0 of 4 in current phase
-Status: Ready to plan
-Last activity: 2026-03-05 -- Phase 2 verified and complete
+Plan: 1 of 4 in current phase
+Status: In progress
+Last activity: 2026-03-05 -- Completed 03-01-PLAN.md
 
-Progress: ██████░░░░ 40%
+Progress: ██████▓░░░ 47%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 6
+- Total plans completed: 7
 - Average duration: ~4 min
-- Total execution time: ~24 min
+- Total execution time: ~27 min
 
 **By Phase:**
 
@@ -29,9 +29,10 @@ Progress: ██████░░░░ 40%
 |-------|-------|-------|----------|
 | 1 | 3/3 | ~14 min | ~5 min |
 | 2 | 3/3 | ~10 min | ~3 min |
+| 3 | 1/4 | ~3 min | ~3 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-03 (~4 min), 02-01 (~4 min), 02-02 (~3 min), 02-03 (~3 min)
+- Last 5 plans: 02-01 (~4 min), 02-02 (~3 min), 02-03 (~3 min), 03-01 (~3 min)
 - Trend: Consistent fast execution
 
 ## Accumulated Context
@@ -62,12 +63,16 @@ Recent decisions affecting current work:
 - React cache() used to deduplicate server component data fetches between generateMetadata and page
 - Database Relationships added to types for proper Supabase SDK join inference
 - next/image remote patterns configured for Supabase storage URLs
+- Stripe client uses lazy Proxy pattern to avoid build-time initialization failure (STRIPE_SECRET_KEY unavailable during next build)
+- No client-side Stripe SDK -- hosted Checkout uses server-side redirect only
+- link-page-card converted to client component for buy button interactivity
 
 ### Pending Todos
 
 - Consider migrating middleware.ts to Next.js 16 "proxy" convention in future
 - Configure Supabase email templates for confirm signup and reset password flows
 - Add redirect URLs in Supabase dashboard (localhost and production)
+- Deploy to Ubuntu server with Docker, accessible via test.trant.ch (git pull workflow)
 
 ### Blockers/Concerns
 
@@ -79,5 +84,5 @@ Recent decisions affecting current work:
 ## Session Continuity
 
 Last session: 2026-03-05
-Stopped at: Phase 2 verified and complete
+Stopped at: Completed 03-01-PLAN.md
 Resume file: None
