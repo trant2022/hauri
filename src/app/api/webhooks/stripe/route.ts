@@ -6,9 +6,11 @@ import { stripe } from "@/lib/stripe/client"
 import {
   handleCheckoutCompleted,
   handleDisputeCreated,
+  handleAccountUpdated,
 } from "@/lib/stripe/webhooks"
 
 const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET!
+const connectWebhookSecret = process.env.STRIPE_CONNECT_WEBHOOK_SECRET
 
 export async function POST(req: Request) {
   const body = await req.text()
@@ -23,14 +25,34 @@ export async function POST(req: Request) {
 
   let event: Stripe.Event
 
+  // Dual-secret verification: try primary secret first, then Connect secret
   try {
     event = stripe.webhooks.constructEvent(body, signature, webhookSecret)
-  } catch (err) {
-    console.error("Webhook signature verification failed:", err)
-    return NextResponse.json(
-      { error: "Invalid signature" },
-      { status: 400 }
-    )
+  } catch (primaryErr) {
+    if (
+      connectWebhookSecret &&
+      connectWebhookSecret !== webhookSecret
+    ) {
+      try {
+        event = stripe.webhooks.constructEvent(
+          body,
+          signature,
+          connectWebhookSecret
+        )
+      } catch {
+        console.error("Webhook signature verification failed (both secrets):", primaryErr)
+        return NextResponse.json(
+          { error: "Invalid signature" },
+          { status: 400 }
+        )
+      }
+    } else {
+      console.error("Webhook signature verification failed:", primaryErr)
+      return NextResponse.json(
+        { error: "Invalid signature" },
+        { status: 400 }
+      )
+    }
   }
 
   try {
@@ -42,6 +64,9 @@ export async function POST(req: Request) {
         break
       case "charge.dispute.created":
         await handleDisputeCreated(event.data.object as Stripe.Dispute)
+        break
+      case "account.updated":
+        await handleAccountUpdated(event.data.object as Stripe.Account)
         break
       default:
         console.log(`Unhandled webhook event type: ${event.type}`)

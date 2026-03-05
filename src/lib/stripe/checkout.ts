@@ -45,6 +45,9 @@ export async function createCheckoutSession({
       platform_fee: String(fees.platformFee),
       creator_amount: String(fees.creatorReceives),
     },
+    payment_intent_data: {
+      transfer_group: `link_${linkId}`,
+    },
     success_url: `${appUrl}/l/success?session_id={CHECKOUT_SESSION_ID}`,
     cancel_url: `${appUrl}/l/${slug}`,
   })
