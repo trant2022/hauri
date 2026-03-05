@@ -9,7 +9,7 @@ Unlockt is built in five phases that follow the critical path of value delivery:
 - [x] **Phase 1: Foundation + Auth** - Project scaffolding, database schema, auth system, design system, and landing page
 - [x] **Phase 2: Creator Workflow** - File upload with resumable protocol and payment link creation with public link pages
 - [x] **Phase 3: Purchase + Download** - Stripe Checkout payment flow, webhook processing, and secure file delivery with email receipts
-- [ ] **Phase 4: Connect + Payouts** - Stripe Connect Express onboarding, account state tracking, and creator payout requests
+- [x] **Phase 4: Connect + Payouts** - Stripe Connect Express onboarding, account state tracking, and creator payout requests
 - [ ] **Phase 5: Dashboard + Profiles + Polish** - Creator dashboard with earnings data, public creator profiles, and mobile-responsive buyer flow
 
 ## Phase Details
@@ -82,8 +82,8 @@ Plans:
 **Plans:** 2 plans
 
 Plans:
-- [ ] 04-01-PLAN.md — DB migration (Connect fields + transfer tracking), Stripe Connect/Transfer libs, webhook account.updated handler, transfer-after-checkout logic
-- [ ] 04-02-PLAN.md — Connect onboarding API routes, settings page with Connect status UI, earnings dashboard with transfer totals and re-engagement
+- [x] 04-01-PLAN.md — DB migration (Connect fields + transfer tracking), Stripe Connect/Transfer libs, webhook account.updated handler, transfer-after-checkout logic
+- [x] 04-02-PLAN.md — Connect onboarding API routes, settings page with Connect status UI, earnings dashboard with transfer totals and re-engagement
 
 ### Phase 5: Dashboard + Profiles + Polish
 **Goal**: Creators have a data-rich dashboard and styled public profile, and buyers have a polished mobile experience
@@ -109,9 +109,9 @@ Plans:
 | 1. Foundation + Auth | 3/3 | Verified | 2026-03-05 |
 | 2. Creator Workflow | 3/3 | Verified | 2026-03-05 |
 | 3. Purchase + Download | 4/4 | Verified | 2026-03-06 |
-| 4. Connect + Payouts | 0/2 | Planning complete | - |
+| 4. Connect + Payouts | 2/2 | Verified | 2026-03-05 |
 | 5. Dashboard + Profiles + Polish | 0/3 | Not started | - |
 
 ---
 *Roadmap created: 2026-03-05*
-*Last updated: 2026-03-06 after Phase 4 planning*
+*Last updated: 2026-03-05 after Phase 4 completion*

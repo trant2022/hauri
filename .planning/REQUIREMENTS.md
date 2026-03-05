@@ -54,11 +54,11 @@
 
 ### Stripe Connect & Payouts
 
-- [ ] **CONN-01**: Creator can initiate Stripe Connect Express onboarding from settings
-- [ ] **CONN-02**: Platform tracks Connect account state via account.updated webhooks
-- [ ] **CONN-03**: Payouts are gated behind completed Connect onboarding (KYC verified, charges_enabled)
-- [ ] **CONN-04**: Creator can request payout to bank account via Stripe Connect
-- [ ] **CONN-05**: Re-engagement flow for creators who abandon Connect onboarding mid-flow
+- [x] **CONN-01**: Creator can initiate Stripe Connect Express onboarding from settings
+- [x] **CONN-02**: Platform tracks Connect account state via account.updated webhooks
+- [x] **CONN-03**: Payouts are gated behind completed Connect onboarding (KYC verified, charges_enabled)
+- [x] **CONN-04**: Creator can request payout to bank account via Stripe Connect
+- [x] **CONN-05**: Re-engagement flow for creators who abandon Connect onboarding mid-flow
 
 ### Public Pages
 
@@ -145,11 +145,11 @@
 | DL-04 | Phase 3 | Complete |
 | DL-05 | Phase 3 | Complete |
 | UX-03 | Phase 3 | Complete |
-| CONN-01 | Phase 4 | Pending |
-| CONN-02 | Phase 4 | Pending |
-| CONN-03 | Phase 4 | Pending |
-| CONN-04 | Phase 4 | Pending |
-| CONN-05 | Phase 4 | Pending |
+| CONN-01 | Phase 4 | Complete |
+| CONN-02 | Phase 4 | Complete |
+| CONN-03 | Phase 4 | Complete |
+| CONN-04 | Phase 4 | Complete |
+| CONN-05 | Phase 4 | Complete |
 | DASH-01 | Phase 5 | Pending |
 | DASH-02 | Phase 5 | Pending |
 | DASH-03 | Phase 5 | Pending |
@@ -167,4 +167,4 @@
 
 ---
 *Requirements defined: 2026-03-05*
-*Last updated: 2026-03-06 after Phase 3 completion*
+*Last updated: 2026-03-05 after Phase 4 completion*
