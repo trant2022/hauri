@@ -10,7 +10,7 @@ Unlockt is built in five phases that follow the critical path of value delivery:
 - [x] **Phase 2: Creator Workflow** - File upload with resumable protocol and payment link creation with public link pages
 - [x] **Phase 3: Purchase + Download** - Stripe Checkout payment flow, webhook processing, and secure file delivery with email receipts
 - [x] **Phase 4: Connect + Payouts** - Stripe Connect Express onboarding, account state tracking, and creator payout requests
-- [ ] **Phase 5: Dashboard + Profiles + Polish** - Creator dashboard with earnings data, public creator profiles, and mobile-responsive buyer flow
+- [x] **Phase 5: Dashboard + Profiles + Polish** - Creator dashboard with earnings data, public creator profiles, and mobile-responsive buyer flow
 
 ## Phase Details
 
@@ -98,9 +98,9 @@ Plans:
 **Plans:** 3 plans
 
 Plans:
-- [ ] 05-01-PLAN.md — Dashboard overview with stats cards, per-link earnings breakdown, and transfer history
-- [ ] 05-02-PLAN.md — Profile system: DB migration, avatar upload, profile editing, public profile page at /[username]
-- [ ] 05-03-PLAN.md — Mobile responsiveness: Sheet-based dashboard sidebar and buyer page audit
+- [x] 05-01-PLAN.md — Dashboard overview with stats cards, per-link earnings breakdown, and transfer history
+- [x] 05-02-PLAN.md — Profile system: DB migration, avatar upload, profile editing, public profile page at /[username]
+- [x] 05-03-PLAN.md — Mobile responsiveness: Sheet-based dashboard sidebar and buyer page audit
 
 ## Progress
 
@@ -110,8 +110,8 @@ Plans:
 | 2. Creator Workflow | 3/3 | Verified | 2026-03-05 |
 | 3. Purchase + Download | 4/4 | Verified | 2026-03-06 |
 | 4. Connect + Payouts | 2/2 | Verified | 2026-03-05 |
-| 5. Dashboard + Profiles + Polish | 0/3 | Planning complete | - |
+| 5. Dashboard + Profiles + Polish | 3/3 | Verified | 2026-03-06 |
 
 ---
 *Roadmap created: 2026-03-05*
-*Last updated: 2026-03-06 after Phase 5 planning*
+*Last updated: 2026-03-06 after Phase 5 completion*

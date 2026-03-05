@@ -48,9 +48,9 @@
 
 ### Creator Dashboard
 
-- [ ] **DASH-01**: Dashboard shows total earnings, total sales count, and number of active links
-- [ ] **DASH-02**: Dashboard lists all payment links with per-link sales and earnings
-- [ ] **DASH-03**: Dashboard shows payout history with status
+- [x] **DASH-01**: Dashboard shows total earnings, total sales count, and number of active links
+- [x] **DASH-02**: Dashboard lists all payment links with per-link sales and earnings
+- [x] **DASH-03**: Dashboard shows payout history with status
 
 ### Stripe Connect & Payouts
 
@@ -63,13 +63,13 @@
 ### Public Pages
 
 - [x] **PAGE-01**: Landing page at / explains the product, shows how it works, and has signup CTA
-- [ ] **PAGE-02**: Creator profile page at /[username] shows avatar, bio, social links, and all active payment links
+- [x] **PAGE-02**: Creator profile page at /[username] shows avatar, bio, social links, and all active payment links
 - [x] **PAGE-03**: Buyer-facing link page at /l/[linkId] with preview, price, fees, and buy button
 
 ### Design & UX
 
 - [x] **UX-01**: Dark-mode-first design with Linear/Vercel-inspired aesthetic
-- [ ] **UX-02**: Mobile-responsive buyer flow (link page, checkout, success page, download)
+- [x] **UX-02**: Mobile-responsive buyer flow (link page, checkout, success page, download)
 - [x] **UX-03**: No buyer account required — friction-free purchase flow
 - [x] **UX-04**: Every async action shows loading state and toast notification
 - [x] **UX-05**: All inputs validated with Zod; clear error messages
@@ -150,13 +150,13 @@
 | CONN-03 | Phase 4 | Complete |
 | CONN-04 | Phase 4 | Complete |
 | CONN-05 | Phase 4 | Complete |
-| DASH-01 | Phase 5 | Pending |
-| DASH-02 | Phase 5 | Pending |
-| DASH-03 | Phase 5 | Pending |
+| DASH-01 | Phase 5 | Complete |
+| DASH-02 | Phase 5 | Complete |
+| DASH-03 | Phase 5 | Complete |
 | PAGE-01 | Phase 1 | Complete |
-| PAGE-02 | Phase 5 | Pending |
+| PAGE-02 | Phase 5 | Complete |
 | UX-01 | Phase 1 | Complete |
-| UX-02 | Phase 5 | Pending |
+| UX-02 | Phase 5 | Complete |
 | UX-04 | Phase 1 | Complete |
 | UX-05 | Phase 1 | Complete |
 
@@ -167,4 +167,4 @@
 
 ---
 *Requirements defined: 2026-03-05*
-*Last updated: 2026-03-05 after Phase 4 completion*
+*Last updated: 2026-03-06 after Phase 5 completion*
