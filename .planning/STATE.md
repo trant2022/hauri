@@ -5,33 +5,33 @@
 See: .planning/PROJECT.md (updated 2026-03-05)
 
 **Core value:** Creators can upload a file, set a price, share a link, and get paid -- in under 2 minutes
-**Current focus:** Phase 2
+**Current focus:** Phase 3 (next)
 
 ## Current Position
 
 Phase: 2 of 5 (Creator Workflow)
-Plan: 2 of 3 in current phase
-Status: In progress
-Last activity: 2026-03-05 -- Completed 02-02-PLAN.md
+Plan: 3 of 3 in current phase
+Status: Phase complete
+Last activity: 2026-03-05 -- Completed 02-03-PLAN.md
 
-Progress: ████░░░░░░ 33%
+Progress: ██████░░░░ 40%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 5
+- Total plans completed: 6
 - Average duration: ~4 min
-- Total execution time: ~21 min
+- Total execution time: ~24 min
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 1 | 3/3 | ~14 min | ~5 min |
-| 2 | 2/3 | ~7 min | ~4 min |
+| 2 | 3/3 | ~10 min | ~3 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-02 (~2 min), 01-03 (~4 min), 02-01 (~4 min), 02-02 (~3 min)
+- Last 5 plans: 01-03 (~4 min), 02-01 (~4 min), 02-02 (~3 min), 02-03 (~3 min)
 - Trend: Consistent fast execution
 
 ## Accumulated Context
@@ -59,6 +59,9 @@ Recent decisions affecting current work:
 - Link list uses inline Switch for active/inactive toggle
 - Edit page uses React use() to unwrap params Promise in client component
 - Preview upload failure handled gracefully without blocking form submission
+- React cache() used to deduplicate server component data fetches between generateMetadata and page
+- Database Relationships added to types for proper Supabase SDK join inference
+- next/image remote patterns configured for Supabase storage URLs
 
 ### Pending Todos
 
@@ -78,5 +81,5 @@ Recent decisions affecting current work:
 ## Session Continuity
 
 Last session: 2026-03-05
-Stopped at: Completed 02-02-PLAN.md
+Stopped at: Completed 02-03-PLAN.md (Phase 2 complete)
 Resume file: None
