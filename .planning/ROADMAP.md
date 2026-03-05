@@ -43,12 +43,12 @@ Plans:
   4. Buyer visiting a payment link URL sees file name, preview (if set), price with fee breakdown, and a buy button
   5. Invalid file types are rejected on upload, and rate limiting prevents upload abuse
 
-**Plans**: TBD
+**Plans:** 3 plans
 
 Plans:
-- [ ] 02-01: Direct-to-Supabase file upload with TUS resumable protocol, progress UI, validation, and rate limiting
-- [ ] 02-02: Payment link CRUD (create, edit, deactivate) with price, currency, preview, and max unlock settings
-- [ ] 02-03: Public link page (/l/[linkId]) with preview, price, fee breakdown, and buy button
+- [ ] 02-01-PLAN.md — Storage infrastructure, TUS resumable file upload with progress and validation, files API with rate limiting, files dashboard
+- [ ] 02-02-PLAN.md — Payment link CRUD with price/currency/preview, fee preview, links API with nanoid slugs, links dashboard pages
+- [ ] 02-03-PLAN.md — Public buyer-facing link page at /l/[slug] with OG metadata, fee breakdown, preview, and buy button
 
 ### Phase 3: Purchase + Download
 **Goal**: Buyers can pay for a file and instantly download it, with email receipt and 48-hour re-download window
@@ -107,11 +107,11 @@ Plans:
 | Phase | Plans Complete | Status | Completed |
 |-------|---------------|--------|-----------|
 | 1. Foundation + Auth | 3/3 | Verified | 2026-03-05 |
-| 2. Creator Workflow | 0/3 | Not started | - |
+| 2. Creator Workflow | 0/3 | Planning complete | - |
 | 3. Purchase + Download | 0/4 | Not started | - |
 | 4. Connect + Payouts | 0/2 | Not started | - |
 | 5. Dashboard + Profiles + Polish | 0/3 | Not started | - |
 
 ---
 *Roadmap created: 2026-03-05*
-*Last updated: 2026-03-05 after Phase 1 completion*
+*Last updated: 2026-03-05 after Phase 2 planning*
