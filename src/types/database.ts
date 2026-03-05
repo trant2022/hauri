@@ -17,6 +17,10 @@ export type Database = {
           stripe_account_id: string | null
           stripe_customer_id: string | null
           kyc_verified: boolean
+          charges_enabled: boolean
+          payouts_enabled: boolean
+          details_submitted: boolean
+          onboarding_complete: boolean
           created_at: string
         }
         Insert: {
@@ -26,6 +30,10 @@ export type Database = {
           stripe_account_id?: string | null
           stripe_customer_id?: string | null
           kyc_verified?: boolean
+          charges_enabled?: boolean
+          payouts_enabled?: boolean
+          details_submitted?: boolean
+          onboarding_complete?: boolean
           created_at?: string
         }
         Update: {
@@ -35,6 +43,10 @@ export type Database = {
           stripe_account_id?: string | null
           stripe_customer_id?: string | null
           kyc_verified?: boolean
+          charges_enabled?: boolean
+          payouts_enabled?: boolean
+          details_submitted?: boolean
+          onboarding_complete?: boolean
           created_at?: string
         }
         Relationships: []
@@ -151,6 +163,8 @@ export type Database = {
           currency: string
           stripe_session_id: string | null
           stripe_payment_intent_id: string | null
+          stripe_transfer_id: string | null
+          transfer_status: string
           status: string
           created_at: string
         }
@@ -164,6 +178,8 @@ export type Database = {
           currency: string
           stripe_session_id?: string | null
           stripe_payment_intent_id?: string | null
+          stripe_transfer_id?: string | null
+          transfer_status?: string
           status?: string
           created_at?: string
         }
@@ -177,6 +193,8 @@ export type Database = {
           currency?: string
           stripe_session_id?: string | null
           stripe_payment_intent_id?: string | null
+          stripe_transfer_id?: string | null
+          transfer_status?: string
           status?: string
           created_at?: string
         }
