@@ -10,18 +10,18 @@ See: .planning/PROJECT.md (updated 2026-03-05)
 ## Current Position
 
 Phase: 4 of 5 (Connect + Payouts)
-Plan: 0 of 2 in current phase
-Status: Ready to plan
-Last activity: 2026-03-06 -- Phase 3 verified and complete
+Plan: 1 of 2 in current phase
+Status: In progress
+Last activity: 2026-03-05 -- Completed 04-01-PLAN.md
 
-Progress: ████████░░ 60%
+Progress: █████████░ 73%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 10
+- Total plans completed: 11
 - Average duration: ~3 min
-- Total execution time: ~33 min
+- Total execution time: ~36 min
 
 **By Phase:**
 
@@ -31,8 +31,10 @@ Progress: ████████░░ 60%
 | 2 | 3/3 | ~10 min | ~3 min |
 | 3 | 4/4 | ~9 min | ~2 min |
 
+| 4 | 1/2 | ~3 min | ~3 min |
+
 **Recent Trend:**
-- Last 5 plans: 03-01 (~3 min), 03-02 (~2 min), 03-03 (~2 min), 03-04 (~2 min)
+- Last 5 plans: 03-02 (~2 min), 03-03 (~2 min), 03-04 (~2 min), 04-01 (~3 min)
 - Trend: Consistent fast execution
 
 ## Accumulated Context
@@ -74,6 +76,10 @@ Recent decisions affecting current work:
 - Resend SDK uses lazy singleton init (same pattern as Stripe) to avoid build-time crash without RESEND_API_KEY
 - Email sending is fire-and-forget with .catch() -- never blocks webhook response
 - Using onboarding@resend.dev as dev sender (production needs custom domain)
+- Dual webhook secret verification: tries primary secret first, falls back to Connect secret for account.updated events
+- Transfer error isolation: transfer failures never break checkout webhook or email sending
+- Pending transfer pattern: transactions default 'not_applicable', set 'pending' when creator not onboarded, batch-processed on account.updated
+- source_transaction used on transfers for automatic fund availability timing
 
 ### Pending Todos
 
@@ -91,6 +97,6 @@ Recent decisions affecting current work:
 
 ## Session Continuity
 
-Last session: 2026-03-06
-Stopped at: Phase 3 verified and complete
+Last session: 2026-03-05
+Stopped at: Completed 04-01-PLAN.md
 Resume file: None
