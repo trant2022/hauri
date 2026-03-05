@@ -21,6 +21,9 @@ export type Database = {
           payouts_enabled: boolean
           details_submitted: boolean
           onboarding_complete: boolean
+          avatar_url: string | null
+          bio: string | null
+          social_links: Json
           created_at: string
         }
         Insert: {
@@ -34,6 +37,9 @@ export type Database = {
           payouts_enabled?: boolean
           details_submitted?: boolean
           onboarding_complete?: boolean
+          avatar_url?: string | null
+          bio?: string | null
+          social_links?: Json
           created_at?: string
         }
         Update: {
@@ -47,6 +53,9 @@ export type Database = {
           payouts_enabled?: boolean
           details_submitted?: boolean
           onboarding_complete?: boolean
+          avatar_url?: string | null
+          bio?: string | null
+          social_links?: Json
           created_at?: string
         }
         Relationships: []

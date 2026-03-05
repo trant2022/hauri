@@ -1,5 +1,11 @@
 import { z } from "zod"
 
+export const RESERVED_USERNAMES = [
+  "dashboard", "login", "signup", "forgot-password", "reset-password",
+  "api", "auth", "l", "admin", "settings", "profile",
+  "about", "terms", "privacy", "help", "support",
+] as const
+
 export const signupSchema = z.object({
   email: z.string().email("Invalid email address"),
   password: z
@@ -13,6 +19,10 @@ export const signupSchema = z.object({
     .regex(
       /^[a-z0-9_-]+$/,
       "Only lowercase letters, numbers, hyphens, underscores"
+    )
+    .refine(
+      (val) => !(RESERVED_USERNAMES as readonly string[]).includes(val),
+      "This username is reserved"
     ),
 })
 
