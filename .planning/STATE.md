@@ -10,27 +10,28 @@ See: .planning/PROJECT.md (updated 2026-03-05)
 ## Current Position
 
 Phase: 2 of 5 (Creator Workflow)
-Plan: 0 of 3 in current phase
-Status: Ready to plan
-Last activity: 2026-03-05 -- Phase 1 verified and complete
+Plan: 1 of 3 in current phase
+Status: In progress
+Last activity: 2026-03-05 -- Completed 02-01-PLAN.md
 
-Progress: ██░░░░░░░░ 20%
+Progress: ███░░░░░░░ 27%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 3
+- Total plans completed: 4
 - Average duration: ~5 min
-- Total execution time: ~14 min
+- Total execution time: ~18 min
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 1 | 3/3 | ~14 min | ~5 min |
+| 2 | 1/3 | ~4 min | ~4 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (~8 min), 01-02 (~2 min), 01-03 (~4 min)
+- Last 5 plans: 01-01 (~8 min), 01-02 (~2 min), 01-03 (~4 min), 02-01 (~4 min)
 - Trend: Consistent fast execution
 
 ## Accumulated Context
@@ -50,10 +51,13 @@ Recent decisions affecting current work:
 - OAuth callback route prepared as placeholder for future provider support
 - Marketing layout: data-driven arrays mapped to JSX for steps/features sections
 - Server components used for all marketing pages (no client JS needed)
+- Zod v4 uses `error` string instead of `errorMap` for enum validation customization
+- Files dashboard page is "use client" for upload/list refresh coordination
+- Storage verification uses supabase.storage.list() before creating DB record
 
 ### Pending Todos
 
-- Start Docker and run `npx supabase start` + `npx supabase db reset` to apply migration
+- Start Docker and run `npx supabase start` + `npx supabase db reset` to apply migrations (00001 + 00002)
 - Regenerate `src/types/database.ts` from local Supabase once Docker is available
 - Consider migrating middleware.ts to Next.js 16 "proxy" convention in future
 - Configure Supabase email templates for confirm signup and reset password flows
@@ -61,12 +65,13 @@ Recent decisions affecting current work:
 
 ### Blockers/Concerns
 
-- Docker not running: Supabase local instance cannot start, blocking end-to-end auth testing
+- Docker not running: Supabase local instance cannot start, blocking end-to-end auth and storage testing
 - Next.js 16 middleware deprecation: functional now but will need migration eventually
 - Supabase email templates need manual dashboard configuration for verification/reset flows
+- Supabase project must be on Pro plan for 500MB file uploads (Free plan limits to 50MB)
 
 ## Session Continuity
 
 Last session: 2026-03-05
-Stopped at: Completed 01-03-PLAN.md -- Phase 1 fully complete
+Stopped at: Completed 02-01-PLAN.md
 Resume file: None
