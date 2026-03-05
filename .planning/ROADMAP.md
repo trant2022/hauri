@@ -79,11 +79,11 @@ Plans:
   3. Payouts are blocked until Connect onboarding is fully complete (charges_enabled = true)
   4. Creator can request a payout to their bank account and see it reflected in their payout history
 
-**Plans**: TBD
+**Plans:** 2 plans
 
 Plans:
-- [ ] 04-01: Stripe Connect Express onboarding flow, account.updated webhook, state tracking
-- [ ] 04-02: Payout request flow, payout gating on KYC completion, re-engagement for abandoned onboarding
+- [ ] 04-01-PLAN.md — DB migration (Connect fields + transfer tracking), Stripe Connect/Transfer libs, webhook account.updated handler, transfer-after-checkout logic
+- [ ] 04-02-PLAN.md — Connect onboarding API routes, settings page with Connect status UI, earnings dashboard with transfer totals and re-engagement
 
 ### Phase 5: Dashboard + Profiles + Polish
 **Goal**: Creators have a data-rich dashboard and styled public profile, and buyers have a polished mobile experience
@@ -109,9 +109,9 @@ Plans:
 | 1. Foundation + Auth | 3/3 | Verified | 2026-03-05 |
 | 2. Creator Workflow | 3/3 | Verified | 2026-03-05 |
 | 3. Purchase + Download | 4/4 | Verified | 2026-03-06 |
-| 4. Connect + Payouts | 0/2 | Not started | - |
+| 4. Connect + Payouts | 0/2 | Planning complete | - |
 | 5. Dashboard + Profiles + Polish | 0/3 | Not started | - |
 
 ---
 *Roadmap created: 2026-03-05*
-*Last updated: 2026-03-06 after Phase 3 completion*
+*Last updated: 2026-03-06 after Phase 4 planning*
