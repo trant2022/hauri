@@ -8,7 +8,7 @@ import { createClient } from "@/lib/supabase/client"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
-const navItems = [
+export const navItems = [
   { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
   { href: "/dashboard/profile", label: "Profile", icon: UserCircle },
   { href: "/dashboard/files", label: "Files", icon: FileIcon },
@@ -29,7 +29,7 @@ export function DashboardSidebar({ userEmail }: { userEmail: string }) {
   }
 
   return (
-    <aside className="flex h-screen w-64 flex-col border-r border-border bg-card">
+    <aside className="hidden md:flex h-screen w-64 flex-col border-r border-border bg-card">
       <div className="flex h-14 items-center border-b border-border px-6">
         <Link href="/dashboard" className="text-lg font-bold tracking-tight">
           unlockt
