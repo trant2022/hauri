@@ -117,54 +117,54 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| AUTH-01 | Pending | Pending |
-| AUTH-02 | Pending | Pending |
-| AUTH-03 | Pending | Pending |
-| AUTH-04 | Pending | Pending |
-| FILE-01 | Pending | Pending |
-| FILE-02 | Pending | Pending |
-| FILE-03 | Pending | Pending |
-| FILE-04 | Pending | Pending |
-| FILE-05 | Pending | Pending |
-| LINK-01 | Pending | Pending |
-| LINK-02 | Pending | Pending |
-| LINK-03 | Pending | Pending |
-| LINK-04 | Pending | Pending |
-| LINK-05 | Pending | Pending |
-| LINK-06 | Pending | Pending |
-| PAY-01 | Pending | Pending |
-| PAY-02 | Pending | Pending |
-| PAY-03 | Pending | Pending |
-| PAY-04 | Pending | Pending |
-| PAY-05 | Pending | Pending |
-| PAY-06 | Pending | Pending |
-| DL-01 | Pending | Pending |
-| DL-02 | Pending | Pending |
-| DL-03 | Pending | Pending |
-| DL-04 | Pending | Pending |
-| DL-05 | Pending | Pending |
-| DASH-01 | Pending | Pending |
-| DASH-02 | Pending | Pending |
-| DASH-03 | Pending | Pending |
-| CONN-01 | Pending | Pending |
-| CONN-02 | Pending | Pending |
-| CONN-03 | Pending | Pending |
-| CONN-04 | Pending | Pending |
-| CONN-05 | Pending | Pending |
-| PAGE-01 | Pending | Pending |
-| PAGE-02 | Pending | Pending |
-| PAGE-03 | Pending | Pending |
-| UX-01 | Pending | Pending |
-| UX-02 | Pending | Pending |
-| UX-03 | Pending | Pending |
-| UX-04 | Pending | Pending |
-| UX-05 | Pending | Pending |
+| AUTH-01 | Phase 1 | Pending |
+| AUTH-02 | Phase 1 | Pending |
+| AUTH-03 | Phase 1 | Pending |
+| AUTH-04 | Phase 1 | Pending |
+| FILE-01 | Phase 2 | Pending |
+| FILE-02 | Phase 2 | Pending |
+| FILE-03 | Phase 2 | Pending |
+| FILE-04 | Phase 2 | Pending |
+| FILE-05 | Phase 2 | Pending |
+| LINK-01 | Phase 2 | Pending |
+| LINK-02 | Phase 2 | Pending |
+| LINK-03 | Phase 2 | Pending |
+| LINK-04 | Phase 2 | Pending |
+| LINK-05 | Phase 2 | Pending |
+| LINK-06 | Phase 2 | Pending |
+| PAGE-03 | Phase 2 | Pending |
+| PAY-01 | Phase 3 | Pending |
+| PAY-02 | Phase 3 | Pending |
+| PAY-03 | Phase 3 | Pending |
+| PAY-04 | Phase 3 | Pending |
+| PAY-05 | Phase 3 | Pending |
+| PAY-06 | Phase 3 | Pending |
+| DL-01 | Phase 3 | Pending |
+| DL-02 | Phase 3 | Pending |
+| DL-03 | Phase 3 | Pending |
+| DL-04 | Phase 3 | Pending |
+| DL-05 | Phase 3 | Pending |
+| UX-03 | Phase 3 | Pending |
+| CONN-01 | Phase 4 | Pending |
+| CONN-02 | Phase 4 | Pending |
+| CONN-03 | Phase 4 | Pending |
+| CONN-04 | Phase 4 | Pending |
+| CONN-05 | Phase 4 | Pending |
+| DASH-01 | Phase 5 | Pending |
+| DASH-02 | Phase 5 | Pending |
+| DASH-03 | Phase 5 | Pending |
+| PAGE-01 | Phase 1 | Pending |
+| PAGE-02 | Phase 5 | Pending |
+| UX-01 | Phase 1 | Pending |
+| UX-02 | Phase 5 | Pending |
+| UX-04 | Phase 1 | Pending |
+| UX-05 | Phase 1 | Pending |
 
 **Coverage:**
-- v1 requirements: 41 total
-- Mapped to phases: 0
-- Unmapped: 41
+- v1 requirements: 42 total
+- Mapped to phases: 42
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-03-05*
-*Last updated: 2026-03-05 after initial definition*
+*Last updated: 2026-03-05 after roadmap creation*

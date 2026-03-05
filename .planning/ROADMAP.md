@@ -1,0 +1,117 @@
+# Roadmap: Unlockt
+
+## Overview
+
+Unlockt is built in five phases that follow the critical path of value delivery: first establish the foundation and auth system, then enable creators to upload files and create payment links, then wire up the purchase-to-download money flow, then connect creators to payouts via Stripe Connect, and finally polish with dashboard analytics, creator profiles, and mobile responsiveness. Each phase delivers a complete, verifiable capability -- a creator can progressively do more real things after each phase ships.
+
+## Phases
+
+- [ ] **Phase 1: Foundation + Auth** - Project scaffolding, database schema, auth system, design system, and landing page
+- [ ] **Phase 2: Creator Workflow** - File upload with resumable protocol and payment link creation with public link pages
+- [ ] **Phase 3: Purchase + Download** - Stripe Checkout payment flow, webhook processing, and secure file delivery with email receipts
+- [ ] **Phase 4: Connect + Payouts** - Stripe Connect Express onboarding, account state tracking, and creator payout requests
+- [ ] **Phase 5: Dashboard + Profiles + Polish** - Creator dashboard with earnings data, public creator profiles, and mobile-responsive buyer flow
+
+## Phase Details
+
+### Phase 1: Foundation + Auth
+**Goal**: Creators can register, log in, and navigate a protected dashboard shell on a dark-mode-first app with a public landing page
+**Depends on**: Nothing (first phase)
+**Requirements**: AUTH-01, AUTH-02, AUTH-03, AUTH-04, UX-01, UX-04, UX-05, PAGE-01
+**Success Criteria** (what must be TRUE):
+  1. Creator can register with email/password/username, verify email, and log in to a protected dashboard area
+  2. Creator session persists across browser refresh without re-login
+  3. Creator can reset a forgotten password via email link and regain access
+  4. Landing page at / explains the product, shows how it works, and has a working signup CTA
+  5. Every form validates input with clear error messages, and every async action shows loading state and toast feedback
+
+**Plans**: TBD
+
+Plans:
+- [ ] 01-01: Next.js 15 project setup, Supabase config, database schema, Tailwind/shadcn design system
+- [ ] 01-02: Auth flows (registration, email verification, login, password reset, session persistence)
+- [ ] 01-03: Landing page and marketing layout
+
+### Phase 2: Creator Workflow
+**Goal**: Creators can upload large files and create shareable payment links with prices, previews, and descriptions
+**Depends on**: Phase 1 (auth, database, design system)
+**Requirements**: FILE-01, FILE-02, FILE-03, FILE-04, FILE-05, LINK-01, LINK-02, LINK-03, LINK-04, LINK-05, LINK-06, PAGE-03
+**Success Criteria** (what must be TRUE):
+  1. Creator can upload a file up to 500MB with a progress bar that survives connection interruption and resumes
+  2. Creator can create a payment link for an uploaded file, setting price in CHF/EUR/USD/GBP, with optional preview image, description, and max unlock count
+  3. Creator can view, edit, and deactivate their payment links from the dashboard
+  4. Buyer visiting a payment link URL sees file name, preview (if set), price with fee breakdown, and a buy button
+  5. Invalid file types are rejected on upload, and rate limiting prevents upload abuse
+
+**Plans**: TBD
+
+Plans:
+- [ ] 02-01: Direct-to-Supabase file upload with TUS resumable protocol, progress UI, validation, and rate limiting
+- [ ] 02-02: Payment link CRUD (create, edit, deactivate) with price, currency, preview, and max unlock settings
+- [ ] 02-03: Public link page (/l/[linkId]) with preview, price, fee breakdown, and buy button
+
+### Phase 3: Purchase + Download
+**Goal**: Buyers can pay for a file and instantly download it, with email receipt and 48-hour re-download window
+**Depends on**: Phase 2 (files, links, link pages)
+**Requirements**: PAY-01, PAY-02, PAY-03, PAY-04, PAY-05, PAY-06, DL-01, DL-02, DL-03, DL-04, DL-05, UX-03
+**Success Criteria** (what must be TRUE):
+  1. Buyer can pay via Stripe Checkout with credit/debit card (and TWINT for CHF links) without creating an account
+  2. After confirmed payment, buyer lands on a success page and can immediately download the file via a signed URL
+  3. Buyer receives an email receipt with a download link that works for 48 hours after purchase
+  4. Duplicate webhook deliveries do not create duplicate transactions or inflate revenue numbers
+  5. Files are never accessible via public URL -- only via time-limited signed URLs after verified payment
+
+**Plans**: TBD
+
+Plans:
+- [ ] 03-01: Fee calculation module (integer arithmetic), Stripe Checkout session creation with Direct Charges
+- [ ] 03-02: Webhook handler (checkout.session.completed, charge.disputed) with idempotent transaction recording
+- [ ] 03-03: Post-payment success page with race condition handling, signed URL download delivery
+- [ ] 03-04: Email receipt with download link, 48-hour re-download token system
+
+### Phase 4: Connect + Payouts
+**Goal**: Creators can onboard to Stripe Connect, complete KYC, and request payouts to their bank account
+**Depends on**: Phase 3 (payment flow must work before payouts make sense)
+**Requirements**: CONN-01, CONN-02, CONN-03, CONN-04, CONN-05
+**Success Criteria** (what must be TRUE):
+  1. Creator can initiate Stripe Connect Express onboarding from their settings page and complete the full KYC flow
+  2. Creators who abandon onboarding mid-flow can resume from where they left off
+  3. Payouts are blocked until Connect onboarding is fully complete (charges_enabled = true)
+  4. Creator can request a payout to their bank account and see it reflected in their payout history
+
+**Plans**: TBD
+
+Plans:
+- [ ] 04-01: Stripe Connect Express onboarding flow, account.updated webhook, state tracking
+- [ ] 04-02: Payout request flow, payout gating on KYC completion, re-engagement for abandoned onboarding
+
+### Phase 5: Dashboard + Profiles + Polish
+**Goal**: Creators have a data-rich dashboard and styled public profile, and buyers have a polished mobile experience
+**Depends on**: Phase 4 (dashboard needs payout history data; profile needs active links data)
+**Requirements**: DASH-01, DASH-02, DASH-03, PAGE-02, UX-02
+**Success Criteria** (what must be TRUE):
+  1. Dashboard shows total earnings, total sales count, active links count, and payout history with status
+  2. Dashboard lists all payment links with per-link sales and earnings breakdown
+  3. Creator profile page at /[username] displays avatar, bio, social links, and all active payment links
+  4. Buyer flow (link page, checkout, success page, download) is fully usable on mobile devices
+
+**Plans**: TBD
+
+Plans:
+- [ ] 05-01: Creator dashboard with earnings, sales, active links, per-link breakdown, and payout history
+- [ ] 05-02: Creator public profile page (/[username]) with avatar, bio, social links, and active links
+- [ ] 05-03: Mobile responsiveness pass across all buyer-facing pages
+
+## Progress
+
+| Phase | Plans Complete | Status | Completed |
+|-------|---------------|--------|-----------|
+| 1. Foundation + Auth | 0/3 | Not started | - |
+| 2. Creator Workflow | 0/3 | Not started | - |
+| 3. Purchase + Download | 0/4 | Not started | - |
+| 4. Connect + Payouts | 0/2 | Not started | - |
+| 5. Dashboard + Profiles + Polish | 0/3 | Not started | - |
+
+---
+*Roadmap created: 2026-03-05*
+*Last updated: 2026-03-05*
