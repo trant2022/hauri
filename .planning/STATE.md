@@ -5,33 +5,33 @@
 See: .planning/PROJECT.md (updated 2026-03-05)
 
 **Core value:** Creators can upload a file, set a price, share a link, and get paid -- in under 2 minutes
-**Current focus:** Phase 1
+**Current focus:** Phase 1 complete, ready for Phase 2
 
 ## Current Position
 
 Phase: 1 of 5 (Foundation + Auth)
-Plan: 2 of 3 in current phase
-Status: In progress
-Last activity: 2026-03-05 -- Completed 01-02-PLAN.md (Auth Forms + Callbacks)
+Plan: 3 of 3 in current phase
+Status: Phase complete
+Last activity: 2026-03-05 -- Completed 01-03-PLAN.md (Landing Page)
 
-Progress: ██████░░░░ 67% (Phase 1)
+Progress: ██████████ 100% (Phase 1)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 2
+- Total plans completed: 3
 - Average duration: ~5 min
-- Total execution time: ~10 min
+- Total execution time: ~14 min
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 1 | 2/3 | ~10 min | ~5 min |
+| 1 | 3/3 | ~14 min | ~5 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (~8 min), 01-02 (~2 min)
-- Trend: Accelerating as foundation is laid
+- Last 5 plans: 01-01 (~8 min), 01-02 (~2 min), 01-03 (~4 min)
+- Trend: Consistent fast execution
 
 ## Accumulated Context
 
@@ -48,6 +48,8 @@ Recent decisions affecting current work:
 - Auth forms use inline confirmation cards ("check your email") instead of separate pages
 - Reset password page guards with session check on mount, redirects unauthenticated users
 - OAuth callback route prepared as placeholder for future provider support
+- Marketing layout: data-driven arrays mapped to JSX for steps/features sections
+- Server components used for all marketing pages (no client JS needed)
 
 ### Pending Todos
 
@@ -66,5 +68,5 @@ Recent decisions affecting current work:
 ## Session Continuity
 
 Last session: 2026-03-05
-Stopped at: Completed 01-02-PLAN.md
+Stopped at: Completed 01-03-PLAN.md -- Phase 1 fully complete
 Resume file: None
