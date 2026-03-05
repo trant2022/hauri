@@ -89,6 +89,39 @@ export async function getLinkBySlug(
 // ============================================================
 
 /**
+ * Fetches a creator's public profile by username.
+ * Uses admin client to bypass RLS.
+ */
+export async function getPublicProfile(
+  supabase: SupabaseClient<Database>,
+  username: string
+) {
+  return supabase
+    .from("users")
+    .select("id, username, avatar_url, bio, social_links")
+    .eq("username", username)
+    .single()
+}
+
+/**
+ * Fetches all active links for a creator (public view).
+ * Uses admin client to bypass RLS.
+ */
+export async function getPublicCreatorLinks(
+  supabase: SupabaseClient<Database>,
+  userId: string
+) {
+  return supabase
+    .from("links")
+    .select(
+      "slug, title, description, preview_url, price_amount, price_currency"
+    )
+    .eq("user_id", userId)
+    .eq("is_active", true)
+    .order("created_at", { ascending: false })
+}
+
+/**
  * Fetches a public link by slug with joined file data.
  * Uses admin client (service role) to bypass RLS -- safe because
  * this is only called from server components, never exposed to client.
