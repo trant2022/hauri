@@ -10,28 +10,28 @@ See: .planning/PROJECT.md (updated 2026-03-05)
 ## Current Position
 
 Phase: 2 of 5 (Creator Workflow)
-Plan: 1 of 3 in current phase
+Plan: 2 of 3 in current phase
 Status: In progress
-Last activity: 2026-03-05 -- Completed 02-01-PLAN.md
+Last activity: 2026-03-05 -- Completed 02-02-PLAN.md
 
-Progress: ███░░░░░░░ 27%
+Progress: ████░░░░░░ 33%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 4
-- Average duration: ~5 min
-- Total execution time: ~18 min
+- Total plans completed: 5
+- Average duration: ~4 min
+- Total execution time: ~21 min
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 1 | 3/3 | ~14 min | ~5 min |
-| 2 | 1/3 | ~4 min | ~4 min |
+| 2 | 2/3 | ~7 min | ~4 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (~8 min), 01-02 (~2 min), 01-03 (~4 min), 02-01 (~4 min)
+- Last 5 plans: 01-02 (~2 min), 01-03 (~4 min), 02-01 (~4 min), 02-02 (~3 min)
 - Trend: Consistent fast execution
 
 ## Accumulated Context
@@ -54,6 +54,11 @@ Recent decisions affecting current work:
 - Zod v4 uses `error` string instead of `errorMap` for enum validation customization
 - Files dashboard page is "use client" for upload/list refresh coordination
 - Storage verification uses supabase.storage.list() before creating DB record
+- updateLinkSchema omits fileId (cannot change file after creation)
+- priceDisplaySchema validates client-side decimal input with 0.50 minimum
+- Link list uses inline Switch for active/inactive toggle
+- Edit page uses React use() to unwrap params Promise in client component
+- Preview upload failure handled gracefully without blocking form submission
 
 ### Pending Todos
 
@@ -73,5 +78,5 @@ Recent decisions affecting current work:
 ## Session Continuity
 
 Last session: 2026-03-05
-Stopped at: Completed 02-01-PLAN.md
+Stopped at: Completed 02-02-PLAN.md
 Resume file: None
