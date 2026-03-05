@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-03-05)
 
 **Core value:** Creators can upload a file, set a price, share a link, and get paid -- in under 2 minutes
-**Current focus:** Phase 3
+**Current focus:** Phase 3 complete, ready for Phase 4
 
 ## Current Position
 
 Phase: 3 of 5 (Purchase + Download)
-Plan: 3 of 4 in current phase
-Status: In progress
-Last activity: 2026-03-05 -- Completed 03-03-PLAN.md
+Plan: 4 of 4 in current phase
+Status: Phase complete
+Last activity: 2026-03-05 -- Completed 03-04-PLAN.md
 
-Progress: ████████░░ 60%
+Progress: ██████░░░░ 67%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 9
+- Total plans completed: 10
 - Average duration: ~3 min
-- Total execution time: ~31 min
+- Total execution time: ~33 min
 
 **By Phase:**
 
@@ -29,10 +29,10 @@ Progress: ████████░░ 60%
 |-------|-------|-------|----------|
 | 1 | 3/3 | ~14 min | ~5 min |
 | 2 | 3/3 | ~10 min | ~3 min |
-| 3 | 3/4 | ~7 min | ~2 min |
+| 3 | 4/4 | ~9 min | ~2 min |
 
 **Recent Trend:**
-- Last 5 plans: 02-03 (~3 min), 03-01 (~3 min), 03-02 (~2 min), 03-03 (~2 min)
+- Last 5 plans: 03-01 (~3 min), 03-02 (~2 min), 03-03 (~2 min), 03-04 (~2 min)
 - Trend: Consistent fast execution
 
 ## Accumulated Context
@@ -71,6 +71,9 @@ Recent decisions affecting current work:
 - HMAC tokens use base64url encoding with timingSafeEqual for constant-time signature comparison
 - Success page is a server component calling Stripe API directly (no client-side fetch)
 - Download route redirects to signed URL (offloads bandwidth to Supabase CDN)
+- Resend SDK uses lazy singleton init (same pattern as Stripe) to avoid build-time crash without RESEND_API_KEY
+- Email sending is fire-and-forget with .catch() -- never blocks webhook response
+- Using onboarding@resend.dev as dev sender (production needs custom domain)
 
 ### Pending Todos
 
@@ -89,5 +92,5 @@ Recent decisions affecting current work:
 ## Session Continuity
 
 Last session: 2026-03-05
-Stopped at: Completed 03-03-PLAN.md
+Stopped at: Completed 03-04-PLAN.md (Phase 3 complete)
 Resume file: None

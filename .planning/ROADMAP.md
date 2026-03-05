@@ -8,7 +8,7 @@ Unlockt is built in five phases that follow the critical path of value delivery:
 
 - [x] **Phase 1: Foundation + Auth** - Project scaffolding, database schema, auth system, design system, and landing page
 - [x] **Phase 2: Creator Workflow** - File upload with resumable protocol and payment link creation with public link pages
-- [ ] **Phase 3: Purchase + Download** - Stripe Checkout payment flow, webhook processing, and secure file delivery with email receipts
+- [x] **Phase 3: Purchase + Download** - Stripe Checkout payment flow, webhook processing, and secure file delivery with email receipts
 - [ ] **Phase 4: Connect + Payouts** - Stripe Connect Express onboarding, account state tracking, and creator payout requests
 - [ ] **Phase 5: Dashboard + Profiles + Polish** - Creator dashboard with earnings data, public creator profiles, and mobile-responsive buyer flow
 
@@ -108,7 +108,7 @@ Plans:
 |-------|---------------|--------|-----------|
 | 1. Foundation + Auth | 3/3 | Verified | 2026-03-05 |
 | 2. Creator Workflow | 3/3 | Verified | 2026-03-05 |
-| 3. Purchase + Download | 0/4 | Planning complete | - |
+| 3. Purchase + Download | 4/4 | Verified | 2026-03-05 |
 | 4. Connect + Payouts | 0/2 | Not started | - |
 | 5. Dashboard + Profiles + Polish | 0/3 | Not started | - |
 
