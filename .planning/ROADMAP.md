@@ -7,7 +7,7 @@ Unlockt is built in five phases that follow the critical path of value delivery:
 ## Phases
 
 - [x] **Phase 1: Foundation + Auth** - Project scaffolding, database schema, auth system, design system, and landing page
-- [ ] **Phase 2: Creator Workflow** - File upload with resumable protocol and payment link creation with public link pages
+- [x] **Phase 2: Creator Workflow** - File upload with resumable protocol and payment link creation with public link pages
 - [ ] **Phase 3: Purchase + Download** - Stripe Checkout payment flow, webhook processing, and secure file delivery with email receipts
 - [ ] **Phase 4: Connect + Payouts** - Stripe Connect Express onboarding, account state tracking, and creator payout requests
 - [ ] **Phase 5: Dashboard + Profiles + Polish** - Creator dashboard with earnings data, public creator profiles, and mobile-responsive buyer flow
@@ -46,9 +46,9 @@ Plans:
 **Plans:** 3 plans
 
 Plans:
-- [ ] 02-01-PLAN.md — Storage infrastructure, TUS resumable file upload with progress and validation, files API with rate limiting, files dashboard
-- [ ] 02-02-PLAN.md — Payment link CRUD with price/currency/preview, fee preview, links API with nanoid slugs, links dashboard pages
-- [ ] 02-03-PLAN.md — Public buyer-facing link page at /l/[slug] with OG metadata, fee breakdown, preview, and buy button
+- [x] 02-01-PLAN.md — Storage infrastructure, TUS resumable file upload with progress and validation, files API with rate limiting, files dashboard
+- [x] 02-02-PLAN.md — Payment link CRUD with price/currency/preview, fee preview, links API with nanoid slugs, links dashboard pages
+- [x] 02-03-PLAN.md — Public buyer-facing link page at /l/[slug] with OG metadata, fee breakdown, preview, and buy button
 
 ### Phase 3: Purchase + Download
 **Goal**: Buyers can pay for a file and instantly download it, with email receipt and 48-hour re-download window
@@ -107,11 +107,11 @@ Plans:
 | Phase | Plans Complete | Status | Completed |
 |-------|---------------|--------|-----------|
 | 1. Foundation + Auth | 3/3 | Verified | 2026-03-05 |
-| 2. Creator Workflow | 0/3 | Planning complete | - |
+| 2. Creator Workflow | 3/3 | Verified | 2026-03-05 |
 | 3. Purchase + Download | 0/4 | Not started | - |
 | 4. Connect + Payouts | 0/2 | Not started | - |
 | 5. Dashboard + Profiles + Polish | 0/3 | Not started | - |
 
 ---
 *Roadmap created: 2026-03-05*
-*Last updated: 2026-03-05 after Phase 2 planning*
+*Last updated: 2026-03-05 after Phase 2 completion*

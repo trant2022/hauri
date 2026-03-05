@@ -14,20 +14,20 @@
 
 ### File Management
 
-- [ ] **FILE-01**: Creator can upload files (images, PDFs, videos, ZIP) up to 500MB via TUS resumable protocol direct to Supabase Storage
-- [ ] **FILE-02**: Upload shows progress bar with percentage and supports resume on failure
-- [ ] **FILE-03**: File type is validated on upload (whitelist of allowed MIME types)
-- [ ] **FILE-04**: Creator can delete their uploaded files
-- [ ] **FILE-05**: Upload rate limiting prevents abuse (max uploads per hour per user)
+- [x] **FILE-01**: Creator can upload files (images, PDFs, videos, ZIP) up to 500MB via TUS resumable protocol direct to Supabase Storage
+- [x] **FILE-02**: Upload shows progress bar with percentage and supports resume on failure
+- [x] **FILE-03**: File type is validated on upload (whitelist of allowed MIME types)
+- [x] **FILE-04**: Creator can delete their uploaded files
+- [x] **FILE-05**: Upload rate limiting prevents abuse (max uploads per hour per user)
 
 ### Payment Links
 
-- [ ] **LINK-01**: Creator can create a payment link for an uploaded file with a unique shareable URL
-- [ ] **LINK-02**: Creator sets price per link in chosen currency (CHF, EUR, USD, GBP)
-- [ ] **LINK-03**: Creator can optionally add preview image and description to link
-- [ ] **LINK-04**: Creator can optionally set max unlock count per link
-- [ ] **LINK-05**: Creator can view, edit, and deactivate their payment links
-- [ ] **LINK-06**: Link page displays file name, preview (if set), price with fees breakdown, and buy button
+- [x] **LINK-01**: Creator can create a payment link for an uploaded file with a unique shareable URL
+- [x] **LINK-02**: Creator sets price per link in chosen currency (CHF, EUR, USD, GBP)
+- [x] **LINK-03**: Creator can optionally add preview image and description to link
+- [x] **LINK-04**: Creator can optionally set max unlock count per link
+- [x] **LINK-05**: Creator can view, edit, and deactivate their payment links
+- [x] **LINK-06**: Link page displays file name, preview (if set), price with fees breakdown, and buy button
 
 ### Payments
 
@@ -64,7 +64,7 @@
 
 - [x] **PAGE-01**: Landing page at / explains the product, shows how it works, and has signup CTA
 - [ ] **PAGE-02**: Creator profile page at /[username] shows avatar, bio, social links, and all active payment links
-- [ ] **PAGE-03**: Buyer-facing link page at /l/[linkId] with preview, price, fees, and buy button
+- [x] **PAGE-03**: Buyer-facing link page at /l/[linkId] with preview, price, fees, and buy button
 
 ### Design & UX
 
@@ -121,18 +121,18 @@
 | AUTH-02 | Phase 1 | Complete |
 | AUTH-03 | Phase 1 | Complete |
 | AUTH-04 | Phase 1 | Complete |
-| FILE-01 | Phase 2 | Pending |
-| FILE-02 | Phase 2 | Pending |
-| FILE-03 | Phase 2 | Pending |
-| FILE-04 | Phase 2 | Pending |
-| FILE-05 | Phase 2 | Pending |
-| LINK-01 | Phase 2 | Pending |
-| LINK-02 | Phase 2 | Pending |
-| LINK-03 | Phase 2 | Pending |
-| LINK-04 | Phase 2 | Pending |
-| LINK-05 | Phase 2 | Pending |
-| LINK-06 | Phase 2 | Pending |
-| PAGE-03 | Phase 2 | Pending |
+| FILE-01 | Phase 2 | Complete |
+| FILE-02 | Phase 2 | Complete |
+| FILE-03 | Phase 2 | Complete |
+| FILE-04 | Phase 2 | Complete |
+| FILE-05 | Phase 2 | Complete |
+| LINK-01 | Phase 2 | Complete |
+| LINK-02 | Phase 2 | Complete |
+| LINK-03 | Phase 2 | Complete |
+| LINK-04 | Phase 2 | Complete |
+| LINK-05 | Phase 2 | Complete |
+| LINK-06 | Phase 2 | Complete |
+| PAGE-03 | Phase 2 | Complete |
 | PAY-01 | Phase 3 | Pending |
 | PAY-02 | Phase 3 | Pending |
 | PAY-03 | Phase 3 | Pending |
@@ -167,4 +167,4 @@
 
 ---
 *Requirements defined: 2026-03-05*
-*Last updated: 2026-03-05 after Phase 1 completion*
+*Last updated: 2026-03-05 after Phase 2 completion*
