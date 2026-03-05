@@ -108,7 +108,7 @@ export function LinkPageCard({ link }: LinkPageCardProps) {
         )}
 
         {/* File info */}
-        <div className="flex items-center gap-3">
+        <div className="flex flex-wrap items-center gap-3">
           <Badge variant="secondary">{fileTypeLabel}</Badge>
           <div className="flex items-center gap-1.5 text-sm text-muted-foreground">
             <FileIcon className="size-3.5" />

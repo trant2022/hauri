@@ -131,11 +131,11 @@ export default async function SuccessPage({ searchParams }: SuccessPageProps) {
             {/* Purchase details */}
             <div className="w-full rounded-lg border bg-muted/30 p-4">
               <div className="flex items-center justify-between">
-                <div className="text-left">
-                  <p className="font-medium">{fileData.name}</p>
+                <div className="min-w-0 text-left">
+                  <p className="truncate font-medium">{fileData.name}</p>
                   <p className="text-sm text-muted-foreground">{link.title}</p>
                 </div>
-                <p className="font-semibold">
+                <p className="ml-2 shrink-0 font-semibold">
                   {formatPrice(amountPaid, currency)}
                 </p>
               </div>
