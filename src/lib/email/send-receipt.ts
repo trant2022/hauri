@@ -3,7 +3,14 @@ import { PurchaseReceiptEmail } from "./templates/purchase-receipt"
 import { createDownloadToken } from "@/lib/download-token"
 import { formatPrice } from "@/lib/fees"
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+let _resend: Resend | null = null
+
+function getResend(): Resend {
+  if (!_resend) {
+    _resend = new Resend(process.env.RESEND_API_KEY)
+  }
+  return _resend
+}
 
 interface SendReceiptParams {
   buyerEmail: string
@@ -21,7 +28,7 @@ export async function sendPurchaseReceipt(
   const downloadUrl = `${process.env.NEXT_PUBLIC_APP_URL}/api/download/${token}`
   const amountFormatted = formatPrice(params.amountPaid, params.currency)
 
-  const { error } = await resend.emails.send({
+  const { error } = await getResend().emails.send({
     from: "Unlockt <onboarding@resend.dev>",
     to: params.buyerEmail,
     subject: `Your purchase: ${params.linkTitle}`,

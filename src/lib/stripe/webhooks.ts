@@ -1,5 +1,6 @@
 import Stripe from "stripe"
 import { supabaseAdmin } from "@/lib/supabase/admin"
+import { sendPurchaseReceipt } from "@/lib/email/send-receipt"
 
 export async function handleCheckoutCompleted(
   session: Stripe.Checkout.Session
@@ -14,17 +15,21 @@ export async function handleCheckoutCompleted(
       ? session.payment_intent
       : session.payment_intent?.id ?? null
 
-  const { error } = await supabaseAdmin.from("transactions").insert({
-    link_id,
-    buyer_email: buyerEmail,
-    amount_paid: session.amount_total!,
-    platform_fee: Number(platform_fee),
-    creator_amount: Number(creator_amount),
-    currency: session.currency!.toUpperCase(),
-    stripe_session_id: session.id,
-    stripe_payment_intent_id: paymentIntentId,
-    status: "completed",
-  })
+  const { data: transaction, error } = await supabaseAdmin
+    .from("transactions")
+    .insert({
+      link_id,
+      buyer_email: buyerEmail,
+      amount_paid: session.amount_total!,
+      platform_fee: Number(platform_fee),
+      creator_amount: Number(creator_amount),
+      currency: session.currency!.toUpperCase(),
+      stripe_session_id: session.id,
+      stripe_payment_intent_id: paymentIntentId,
+      status: "completed",
+    })
+    .select("id")
+    .single()
 
   if (error) {
     // Unique constraint violation on stripe_session_id -- duplicate webhook delivery
@@ -43,7 +48,23 @@ export async function handleCheckoutCompleted(
 
   console.log(`Transaction recorded for session: ${session.id}`)
 
-  // TODO: Send purchase receipt email (Plan 03-04)
+  // Send purchase receipt email (fire-and-forget)
+  const { data: linkData } = await supabaseAdmin
+    .from("links")
+    .select("title")
+    .eq("id", link_id)
+    .single()
+
+  if (linkData && buyerEmail) {
+    sendPurchaseReceipt({
+      buyerEmail,
+      transactionId: transaction.id,
+      linkId: link_id,
+      linkTitle: linkData.title,
+      amountPaid: session.amount_total!,
+      currency: session.currency!.toUpperCase(),
+    }).catch((err) => console.error("Failed to send receipt email:", err))
+  }
 }
 
 export async function handleDisputeCreated(
