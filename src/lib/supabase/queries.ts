@@ -104,3 +104,42 @@ export async function getPublicLinkBySlug(
     .eq("is_active", true)
     .single()
 }
+
+// ============================================================
+// Earnings Queries
+// ============================================================
+
+/**
+ * Fetches all completed transactions for a creator's links.
+ * Joins transactions -> links to filter by creator user_id.
+ * Returns raw rows for client-side aggregation by currency.
+ */
+export async function getCreatorEarnings(
+  supabase: SupabaseClient<Database>,
+  userId: string
+) {
+  return supabase
+    .from("transactions")
+    .select(
+      "creator_amount, currency, transfer_status, created_at, links!inner(user_id)"
+    )
+    .eq("links.user_id", userId)
+    .eq("status", "completed")
+    .order("created_at", { ascending: false })
+}
+
+/**
+ * Fetches a creator's Connect account status fields.
+ */
+export async function getCreatorConnectStatus(
+  supabase: SupabaseClient<Database>,
+  userId: string
+) {
+  return supabase
+    .from("users")
+    .select(
+      "stripe_account_id, charges_enabled, payouts_enabled, onboarding_complete"
+    )
+    .eq("id", userId)
+    .single()
+}

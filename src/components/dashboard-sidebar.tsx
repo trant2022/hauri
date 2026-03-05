@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
-import { LayoutDashboard, FileIcon, Link2, Settings, LogOut } from "lucide-react"
+import { LayoutDashboard, FileIcon, Link2, DollarSign, Settings, LogOut } from "lucide-react"
 import { toast } from "sonner"
 import { createClient } from "@/lib/supabase/client"
 import { Button } from "@/components/ui/button"
@@ -12,6 +12,7 @@ const navItems = [
   { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
   { href: "/dashboard/files", label: "Files", icon: FileIcon },
   { href: "/dashboard/links", label: "Links", icon: Link2 },
+  { href: "/dashboard/earnings", label: "Earnings", icon: DollarSign },
   { href: "/dashboard/settings", label: "Settings", icon: Settings },
 ]
 
