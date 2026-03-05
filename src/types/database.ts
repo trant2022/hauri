@@ -150,6 +150,7 @@ export type Database = {
           creator_amount: number
           currency: string
           stripe_session_id: string | null
+          stripe_payment_intent_id: string | null
           status: string
           created_at: string
         }
@@ -162,6 +163,7 @@ export type Database = {
           creator_amount: number
           currency: string
           stripe_session_id?: string | null
+          stripe_payment_intent_id?: string | null
           status?: string
           created_at?: string
         }
@@ -174,6 +176,7 @@ export type Database = {
           creator_amount?: number
           currency?: string
           stripe_session_id?: string | null
+          stripe_payment_intent_id?: string | null
           status?: string
           created_at?: string
         }
@@ -230,7 +233,14 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      increment_unlock_count: {
+        Args: { link_id_param: string }
+        Returns: undefined
+      }
+      decrement_unlock_count: {
+        Args: { link_id_param: string }
+        Returns: undefined
+      }
     }
     Enums: {
       [_ in never]: never
