@@ -95,12 +95,12 @@ Plans:
   3. Creator profile page at /[username] displays avatar, bio, social links, and all active payment links
   4. Buyer flow (link page, checkout, success page, download) is fully usable on mobile devices
 
-**Plans**: TBD
+**Plans:** 3 plans
 
 Plans:
-- [ ] 05-01: Creator dashboard with earnings, sales, active links, per-link breakdown, and payout history
-- [ ] 05-02: Creator public profile page (/[username]) with avatar, bio, social links, and active links
-- [ ] 05-03: Mobile responsiveness pass across all buyer-facing pages
+- [ ] 05-01-PLAN.md — Dashboard overview with stats cards, per-link earnings breakdown, and transfer history
+- [ ] 05-02-PLAN.md — Profile system: DB migration, avatar upload, profile editing, public profile page at /[username]
+- [ ] 05-03-PLAN.md — Mobile responsiveness: Sheet-based dashboard sidebar and buyer page audit
 
 ## Progress
 
@@ -110,8 +110,8 @@ Plans:
 | 2. Creator Workflow | 3/3 | Verified | 2026-03-05 |
 | 3. Purchase + Download | 4/4 | Verified | 2026-03-06 |
 | 4. Connect + Payouts | 2/2 | Verified | 2026-03-05 |
-| 5. Dashboard + Profiles + Polish | 0/3 | Not started | - |
+| 5. Dashboard + Profiles + Polish | 0/3 | Planning complete | - |
 
 ---
 *Roadmap created: 2026-03-05*
-*Last updated: 2026-03-05 after Phase 4 completion*
+*Last updated: 2026-03-06 after Phase 5 planning*
