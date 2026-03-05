@@ -10,18 +10,18 @@ See: .planning/PROJECT.md (updated 2026-03-05)
 ## Current Position
 
 Phase: 5 of 5 (Dashboard + Profiles + Polish)
-Plan: 1 of 3 in current phase
+Plan: 2 of 3 in current phase
 Status: In progress
-Last activity: 2026-03-06 -- Completed 05-01-PLAN.md
+Last activity: 2026-03-06 -- Completed 05-02-PLAN.md
 
-Progress: █████████████░ 87%
+Progress: ██████████████░ 93%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 13
+- Total plans completed: 14
 - Average duration: ~3 min
-- Total execution time: ~40 min
+- Total execution time: ~44 min
 
 **By Phase:**
 
@@ -31,10 +31,10 @@ Progress: █████████████░ 87%
 | 2 | 3/3 | ~10 min | ~3 min |
 | 3 | 4/4 | ~9 min | ~2 min |
 | 4 | 2/2 | ~5 min | ~2.5 min |
-| 5 | 1/3 | ~2 min | ~2 min |
+| 5 | 2/3 | ~6 min | ~3 min |
 
 **Recent Trend:**
-- Last 5 plans: 03-04 (~2 min), 04-01 (~3 min), 04-02 (~2 min), 05-01 (~2 min)
+- Last 5 plans: 04-01 (~3 min), 04-02 (~2 min), 05-01 (~2 min), 05-02 (~4 min)
 - Trend: Consistent fast execution
 
 ## Accumulated Context
@@ -86,6 +86,10 @@ Recent decisions affecting current work:
 - Dashboard uses getCreatorTransactionsWithLinks (not getCreatorEarnings) for link context
 - Per-link stats aggregated in TypeScript via Map, consistent with earnings page pattern
 - Empty state shown only when no transactions AND no links exist
+- JSONB column for social_links with typed keys (twitter, instagram, youtube, tiktok, website)
+- Avatar upload uses upsert to single path per user ({userId}/avatar.{ext})
+- Public profile page uses supabaseAdmin (service role) like link page
+- Reserved usernames blocklist prevents /[username] from shadowing static routes
 
 ### Pending Todos
 
@@ -104,5 +108,5 @@ Recent decisions affecting current work:
 ## Session Continuity
 
 Last session: 2026-03-06
-Stopped at: Completed 05-01-PLAN.md
+Stopped at: Completed 05-02-PLAN.md
 Resume file: None
