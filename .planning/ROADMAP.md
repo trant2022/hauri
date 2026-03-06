@@ -32,10 +32,10 @@ See archived roadmap: .planning/milestones/v1.0-ROADMAP.md
   3. Running `deploy.sh` on the server pulls latest code and restarts the app with zero manual steps beyond SSH
   4. A developer cloning the repo can copy `.env.example` to `.env`, fill in values, and have all required configuration documented
   5. Rebuilding containers preserves SSL certificates (no re-provisioning on every deploy)
-**Plans**: TBD
+**Plans:** 1 plan
 
 Plans:
-- [ ] 06-01: TBD
+- [ ] 06-01-PLAN.md -- Dockerfile, Docker Compose, Caddy, deploy script, and env documentation
 
 ## Progress
 
@@ -45,4 +45,4 @@ Phase 6 is the only phase in v1.1.
 | Phase | Milestone | Plans Complete | Status | Completed |
 |-------|-----------|----------------|--------|-----------|
 | 1-5 | v1.0 | -- | Complete | 2026-03-06 |
-| 6. Docker Deployment | v1.1 | 0/TBD | Not started | - |
+| 6. Docker Deployment | v1.1 | 0/1 | Not started | - |
