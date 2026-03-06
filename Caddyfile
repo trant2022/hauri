@@ -1,0 +1,3 @@
+test.trant.ch {
+	reverse_proxy app:3000
+}
