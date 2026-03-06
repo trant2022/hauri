@@ -1,6 +1,8 @@
 import { createHmac, timingSafeEqual } from "crypto"
 
-const SECRET = process.env.DOWNLOAD_TOKEN_SECRET!
+function getSecret() {
+  return process.env.DOWNLOAD_TOKEN_SECRET!
+}
 const TOKEN_TTL_MS = 48 * 60 * 60 * 1000 // 48 hours
 
 interface TokenPayload {
@@ -20,7 +22,7 @@ export function createDownloadToken(
   }
 
   const data = Buffer.from(JSON.stringify(payload)).toString("base64url")
-  const signature = createHmac("sha256", SECRET)
+  const signature = createHmac("sha256", getSecret())
     .update(data)
     .digest("base64url")
 
@@ -35,7 +37,7 @@ export function verifyDownloadToken(token: string): TokenPayload | null {
   const signature = token.slice(dotIndex + 1)
   if (!data || !signature) return null
 
-  const expectedSig = createHmac("sha256", SECRET)
+  const expectedSig = createHmac("sha256", getSecret())
     .update(data)
     .digest("base64url")
 

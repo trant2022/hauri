@@ -9,10 +9,9 @@ import {
   handleAccountUpdated,
 } from "@/lib/stripe/webhooks"
 
-const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET!
-const connectWebhookSecret = process.env.STRIPE_CONNECT_WEBHOOK_SECRET
-
 export async function POST(req: Request) {
+  const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET!
+  const connectWebhookSecret = process.env.STRIPE_CONNECT_WEBHOOK_SECRET
   const body = await req.text()
   const signature = (await headers()).get("stripe-signature")
 
