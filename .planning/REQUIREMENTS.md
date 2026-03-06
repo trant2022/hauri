@@ -41,19 +41,20 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| DOCK-01 | Pending | Pending |
-| DOCK-02 | Pending | Pending |
-| DOCK-03 | Pending | Pending |
-| COMP-01 | Pending | Pending |
-| COMP-02 | Pending | Pending |
-| COMP-03 | Pending | Pending |
-| COMP-04 | Pending | Pending |
-| DEPL-01 | Pending | Pending |
-| DEPL-02 | Pending | Pending |
-| CONF-01 | Pending | Pending |
-| CONF-02 | Pending | Pending |
+| DOCK-01 | Phase 6 | Pending |
+| DOCK-02 | Phase 6 | Pending |
+| DOCK-03 | Phase 6 | Pending |
+| COMP-01 | Phase 6 | Pending |
+| COMP-02 | Phase 6 | Pending |
+| COMP-03 | Phase 6 | Pending |
+| COMP-04 | Phase 6 | Pending |
+| DEPL-01 | Phase 6 | Pending |
+| DEPL-02 | Phase 6 | Pending |
+| CONF-01 | Phase 6 | Pending |
+| CONF-02 | Phase 6 | Pending |
 
 **Coverage:**
 - v1.1 requirements: 11 total
+- Mapped to phases: 11/11
 - Shipped: 0
 - Dropped: 0

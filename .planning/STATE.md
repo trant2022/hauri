@@ -5,18 +5,33 @@
 See: .planning/PROJECT.md (updated 2026-03-06)
 
 **Core value:** Creators can upload a file, set a price, share a link, and get paid -- in under 2 minutes
-**Current focus:** v1.1 Docker Deployment
+**Current focus:** v1.1 Docker Deployment -- Phase 6
 
 ## Current Position
 
 Milestone: v1.1 Docker Deployment
-Phase: Not started (defining requirements)
-Status: Defining requirements
-Last activity: 2026-03-06 -- Milestone v1.1 started
+Phase: 6 of 6 (Docker Deployment)
+Plan: 0 of TBD in current phase
+Status: Ready to plan
+Last activity: 2026-03-06 -- Roadmap created for v1.1
 
 Progress: ░░░░░░░░░░░░░░░ 0%
 
+## Performance Metrics
+
+**Velocity:**
+- Total plans completed: 0 (v1.1)
+- Average duration: --
+- Total execution time: --
+
 ## Accumulated Context
+
+### Decisions
+
+Decisions are logged in PROJECT.md Key Decisions table.
+Recent decisions affecting current work:
+
+- [v1.1]: All 11 deployment requirements grouped into single Phase 6 (tightly coupled delivery unit)
 
 ### Pending Todos
 
@@ -35,5 +50,5 @@ Progress: ░░░░░░░░░░░░░░░ 0%
 ## Session Continuity
 
 Last session: 2026-03-06
-Stopped at: Defining v1.1 milestone requirements
+Stopped at: Roadmap created for v1.1, ready to plan Phase 6
 Resume file: None
