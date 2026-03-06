@@ -18,7 +18,7 @@ See archived roadmap: .planning/milestones/v1.0-ROADMAP.md
 
 **Milestone Goal:** Deploy Unlockt to Ubuntu VPS with Docker, accessible at test.trant.ch with HTTPS via a simple git pull deploy workflow.
 
-- [ ] **Phase 6: Docker Deployment** - Containerize app with Caddy reverse proxy and deploy script
+- [x] **Phase 6: Docker Deployment** - Containerize app with Caddy reverse proxy and deploy script
 
 ## Phase Details
 
@@ -35,7 +35,7 @@ See archived roadmap: .planning/milestones/v1.0-ROADMAP.md
 **Plans:** 1 plan
 
 Plans:
-- [ ] 06-01-PLAN.md -- Dockerfile, Docker Compose, Caddy, deploy script, and env documentation
+- [x] 06-01-PLAN.md -- Dockerfile, Docker Compose, Caddy, deploy script, and env documentation
 
 ## Progress
 
@@ -45,4 +45,4 @@ Phase 6 is the only phase in v1.1.
 | Phase | Milestone | Plans Complete | Status | Completed |
 |-------|-----------|----------------|--------|-----------|
 | 1-5 | v1.0 | -- | Complete | 2026-03-06 |
-| 6. Docker Deployment | v1.1 | 0/1 | Not started | - |
+| 6. Docker Deployment | v1.1 | 1/1 | Verified | 2026-03-06 |

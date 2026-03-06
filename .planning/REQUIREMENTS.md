@@ -7,26 +7,26 @@
 
 ### Docker Build
 
-- [ ] **DOCK-01**: Dockerfile uses multi-stage build with Next.js standalone output for minimal image size
-- [ ] **DOCK-02**: Docker image includes only production dependencies (no dev deps, no source maps)
-- [ ] **DOCK-03**: .dockerignore excludes node_modules, .next, .git, .env, .planning
+- [x] **DOCK-01**: Dockerfile uses multi-stage build with Next.js standalone output for minimal image size
+- [x] **DOCK-02**: Docker image includes only production dependencies (no dev deps, no source maps)
+- [x] **DOCK-03**: .dockerignore excludes node_modules, .next, .git, .env, .planning
 
 ### Compose & Proxy
 
-- [ ] **COMP-01**: docker-compose.yml defines app service and Caddy reverse proxy service
-- [ ] **COMP-02**: Caddy automatically provisions HTTPS for test.trant.ch via Let's Encrypt
-- [ ] **COMP-03**: Caddy proxies HTTPS traffic to Next.js app on internal Docker network
-- [ ] **COMP-04**: Caddy data volume persists SSL certificates across rebuilds
+- [x] **COMP-01**: docker-compose.yml defines app service and Caddy reverse proxy service
+- [x] **COMP-02**: Caddy automatically provisions HTTPS for test.trant.ch via Let's Encrypt
+- [x] **COMP-03**: Caddy proxies HTTPS traffic to Next.js app on internal Docker network
+- [x] **COMP-04**: Caddy data volume persists SSL certificates across rebuilds
 
 ### Deploy Workflow
 
-- [ ] **DEPL-01**: deploy.sh script runs git pull → docker compose down → docker compose up -d --build
-- [ ] **DEPL-02**: App starts and serves requests after deploy.sh completes
+- [x] **DEPL-01**: deploy.sh script runs git pull → docker compose down → docker compose up -d --build
+- [x] **DEPL-02**: App starts and serves requests after deploy.sh completes
 
 ### Configuration
 
-- [ ] **CONF-01**: .env.example documents all required environment variables with placeholder values
-- [ ] **CONF-02**: App reads environment variables from .env file via Docker Compose
+- [x] **CONF-01**: .env.example documents all required environment variables with placeholder values
+- [x] **CONF-02**: App reads environment variables from .env file via Docker Compose
 
 ## Out of Scope
 
@@ -41,20 +41,20 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| DOCK-01 | Phase 6 | Pending |
-| DOCK-02 | Phase 6 | Pending |
-| DOCK-03 | Phase 6 | Pending |
-| COMP-01 | Phase 6 | Pending |
-| COMP-02 | Phase 6 | Pending |
-| COMP-03 | Phase 6 | Pending |
-| COMP-04 | Phase 6 | Pending |
-| DEPL-01 | Phase 6 | Pending |
-| DEPL-02 | Phase 6 | Pending |
-| CONF-01 | Phase 6 | Pending |
-| CONF-02 | Phase 6 | Pending |
+| DOCK-01 | Phase 6 | Complete |
+| DOCK-02 | Phase 6 | Complete |
+| DOCK-03 | Phase 6 | Complete |
+| COMP-01 | Phase 6 | Complete |
+| COMP-02 | Phase 6 | Complete |
+| COMP-03 | Phase 6 | Complete |
+| COMP-04 | Phase 6 | Complete |
+| DEPL-01 | Phase 6 | Complete |
+| DEPL-02 | Phase 6 | Complete |
+| CONF-01 | Phase 6 | Complete |
+| CONF-02 | Phase 6 | Complete |
 
 **Coverage:**
 - v1.1 requirements: 11 total
 - Mapped to phases: 11/11
-- Shipped: 0
+- Shipped: 11
 - Dropped: 0
